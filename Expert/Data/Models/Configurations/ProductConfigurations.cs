@@ -22,6 +22,16 @@ namespace Expert.Data.Models.Configurations
                 .HasColumnType("nvarchar")
                 .HasMaxLength(255)
                 .IsUnicode(true);
+
+            Property(p => p.QuantityInStock)
+                .HasColumnType("decimal")
+                .HasPrecision(18, 2)
+                .IsOptional();
+
+            Property(p => p.Price)
+                .HasColumnType("decimal")
+                .HasPrecision(18, 2)
+                .IsOptional();
         }
     }
 }
