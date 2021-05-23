@@ -80,6 +80,8 @@
     <Compile Include="Data\ExpertContext.cs" />
     <Compile Include="Data\Models\Category.cs" />
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
