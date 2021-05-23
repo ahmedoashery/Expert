@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Data\ExpertContext.cs" />
     <Compile Include="Data\Models\Category.cs" />
+    <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +121,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Models\Configurations\" />
     <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
