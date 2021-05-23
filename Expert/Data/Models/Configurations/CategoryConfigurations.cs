@@ -24,6 +24,11 @@ namespace Expert.Data.Models.Configurations
                 .HasMaxLength(255)
                 .IsUnicode(true);
 
+            HasMany(c => c.Products)
+                .WithRequired(p => p.Category)
+                .HasForeignKey(p => p.Category_id)
+                .WillCascadeOnDelete(false);
+
         }
     }
 }

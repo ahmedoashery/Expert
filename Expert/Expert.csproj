@@ -100,6 +100,10 @@
     <Compile Include="Migrations\202105231631321_AddProductsTable.Designer.cs">
       <DependentUpon>202105231631321_AddProductsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.cs" />
+    <Compile Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.Designer.cs">
+      <DependentUpon>202105231759518_AddCategory_idColumnToProductsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105231631321_AddProductsTable.resx">
       <DependentUpon>202105231631321_AddProductsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.resx">
+      <DependentUpon>202105231759518_AddCategory_idColumnToProductsTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
