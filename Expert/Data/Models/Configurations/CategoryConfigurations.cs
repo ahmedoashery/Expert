@@ -9,13 +9,19 @@ namespace Expert.Data.Models.Configurations
             ToTable("Cateogries");
 
             HasKey(c => c.Category_id);
+
             HasIndex(c => c.Name)
                 .IsUnique();
 
             Property(c => c.Name)
                 .IsRequired()
-                .HasMaxLength(50)
                 .HasColumnType("nvarchar")
+                .HasMaxLength(50)
+                .IsUnicode(true);
+
+            Property(c => c.Description)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(255)
                 .IsUnicode(true);
 
         }
