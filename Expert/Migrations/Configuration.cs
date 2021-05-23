@@ -1,10 +1,8 @@
 namespace Expert.Migrations
 {
+    using Expert.Data;
     using MySql.Data.EntityFramework;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Expert.Data.ExpertContext>
     {
@@ -14,7 +12,7 @@ namespace Expert.Migrations
             SetSqlGenerator("MySql.Data.MySqlClient", new MySqlMigrationSqlGenerator());
         }
 
-        protected override void Seed(Expert.Data.ExpertContext context)
+        protected override void Seed(ExpertContext context)
         {
             //  This method will be called after migrating to the latest version.
 
