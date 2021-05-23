@@ -80,7 +80,9 @@
     <Compile Include="Data\ExpertContext.cs" />
     <Compile Include="Data\Models\Category.cs" />
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\SalesOrderConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
     <Compile Include="Data\Models\Customer.cs" />
     <Compile Include="Data\Models\SalesOrder.cs" />
@@ -112,6 +114,14 @@
     <Compile Include="Migrations\202105231858023_AddSuppliersTable.Designer.cs">
       <DependentUpon>202105231858023_AddSuppliersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.cs" />
+    <Compile Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.Designer.cs">
+      <DependentUpon>202105232016272_AddCustomerTableAndSalesOrdersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.cs" />
+    <Compile Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.Designer.cs">
+      <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +142,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105231858023_AddSuppliersTable.resx">
       <DependentUpon>202105231858023_AddSuppliersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.resx">
+      <DependentUpon>202105232016272_AddCustomerTableAndSalesOrdersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.resx">
+      <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

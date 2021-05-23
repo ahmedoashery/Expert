@@ -2,19 +2,19 @@
 
 namespace Expert.Data.Models.Configurations
 {
-    public class SupplierConfigurations : EntityTypeConfiguration<Supplier>
+    class CustomerConfigurations : EntityTypeConfiguration<Customer>
     {
-        public SupplierConfigurations()
+        public CustomerConfigurations()
         {
-            ToTable("Suppliers");
+            ToTable("Customers");
 
-            HasKey(s => s.Supplier_id);
+            HasKey(c => c.Customer_id);
 
             HasIndex(s => s.Name)
                 .IsUnique();
 
             HasIndex(s => s.Code)
-                .IsUnique();
+                 .IsUnique();
 
             Property(s => s.Code)
                 .HasColumnType("nvarchar")
@@ -27,9 +27,9 @@ namespace Expert.Data.Models.Configurations
                 .IsRequired()
                 .IsUnicode(true);
 
-            HasMany(s => s.Products)
-                .WithRequired(p => p.Supplier)
-                .HasForeignKey(p => p.Supplier_id)
+            HasMany(c => c.Orders)
+                .WithRequired(o => o.Customer)
+                .HasForeignKey(o => o.Customer_id)
                 .WillCascadeOnDelete(false);
         }
     }

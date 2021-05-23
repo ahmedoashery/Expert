@@ -1,8 +1,7 @@
 namespace Expert.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddCategory_idColumnToProductsTable : DbMigration
     {
         public override void Up()
@@ -11,7 +10,7 @@ namespace Expert.Migrations
             CreateIndex("dbo.Products", "Category_id");
             AddForeignKey("dbo.Products", "Category_id", "dbo.Cateogries", "Category_id");
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Products", "Category_id", "dbo.Cateogries");

@@ -13,12 +13,16 @@ namespace Expert.Data
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<SalesOrder> SalesOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new CategoryConfigurations());
             modelBuilder.Configurations.Add(new ProductConfigurations());
             modelBuilder.Configurations.Add(new SupplierConfigurations());
+            modelBuilder.Configurations.Add(new CustomerConfigurations());
+            modelBuilder.Configurations.Add(new SalesOrderConfigurations());
 
             base.OnModelCreating(modelBuilder);
         }
