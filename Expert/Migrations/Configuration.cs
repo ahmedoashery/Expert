@@ -1,5 +1,6 @@
 namespace Expert.Migrations
 {
+    using MySql.Data.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,6 +11,7 @@ namespace Expert.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            SetSqlGenerator("MySql.Data.MySqlClient", new MySqlMigrationSqlGenerator());
         }
 
         protected override void Seed(Expert.Data.ExpertContext context)
