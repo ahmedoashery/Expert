@@ -4,7 +4,7 @@ namespace Expert.Data
 {
     public class ExpertContext : DbContext
     {
-        protected ExpertContext() : base("name=DefaultConnection")
+        public ExpertContext() : base("name=DefaultConnection")
         {
         }
     }
