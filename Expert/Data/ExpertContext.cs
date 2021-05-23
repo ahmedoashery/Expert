@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using Expert.Data.Models;
+using System.Data.Entity;
 
 namespace Expert.Data
 {
@@ -7,5 +8,7 @@ namespace Expert.Data
         public ExpertContext() : base("name=DefaultConnection")
         {
         }
+
+        public virtual DbSet<Category> Categories { get; set; }
     }
 }
