@@ -2,9 +2,9 @@
 
 namespace Expert.Data.Models.Configurations
 {
-    class SalesOrderConfigurations : EntityTypeConfiguration<SalesOrder>
+    class SaleOrderConfigurations : EntityTypeConfiguration<SaleOrder>
     {
-        public SalesOrderConfigurations()
+        public SaleOrderConfigurations()
         {
             ToTable("Sales_Orders");
 

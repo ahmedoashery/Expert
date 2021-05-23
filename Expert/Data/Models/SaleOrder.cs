@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Expert.Data.Models
 {
-    public class SalesOrder
+    public class SaleOrder
     {
         public int Order_id { get; set; }
         public DateTime Date { get; set; }
@@ -14,7 +14,7 @@ namespace Expert.Data.Models
 
         public virtual IList<Product> Products { get; set; }
 
-        public SalesOrder()
+        public SaleOrder()
         {
             Products = new List<Product>();
         }

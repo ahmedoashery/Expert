@@ -6,13 +6,13 @@ namespace Expert.Data.Models
     {
         public Customer()
         {
-            Orders = new List<SalesOrder>();
+            Orders = new List<SaleOrder>();
         }
 
         public int Customer_id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
 
-        public virtual IList<SalesOrder> Orders { get; set; }
+        public virtual IList<SaleOrder> Orders { get; set; }
     }
 }

@@ -14,7 +14,8 @@ namespace Expert.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<SalesOrder> SalesOrders { get; set; }
+        public virtual DbSet<SaleOrder> SalesOrders { get; set; }
+        public virtual DbSet<PurchaseOrder> PurchasesOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -22,7 +23,8 @@ namespace Expert.Data
             modelBuilder.Configurations.Add(new ProductConfigurations());
             modelBuilder.Configurations.Add(new SupplierConfigurations());
             modelBuilder.Configurations.Add(new CustomerConfigurations());
-            modelBuilder.Configurations.Add(new SalesOrderConfigurations());
+            modelBuilder.Configurations.Add(new SaleOrderConfigurations());
+            modelBuilder.Configurations.Add(new PurchaseOrderConfigurations());
 
             base.OnModelCreating(modelBuilder);
         }

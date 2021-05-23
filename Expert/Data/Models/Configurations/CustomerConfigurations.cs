@@ -29,7 +29,7 @@ namespace Expert.Data.Models.Configurations
 
             HasMany(c => c.Orders)
                 .WithRequired(o => o.Customer)
-                .HasForeignKey(o => o.Customer_id)
+                .HasForeignKey(o => o. Customer_id)
                 .WillCascadeOnDelete(false);
         }
     }

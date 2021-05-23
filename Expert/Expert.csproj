@@ -82,10 +82,12 @@
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\SalesOrderConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\PurchaseOrderConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\SaleOrderConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
     <Compile Include="Data\Models\Customer.cs" />
-    <Compile Include="Data\Models\SalesOrder.cs" />
+    <Compile Include="Data\Models\PurchaseOrder.cs" />
+    <Compile Include="Data\Models\SaleOrder.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Supplier.cs" />
     <Compile Include="Main.cs">
@@ -126,6 +128,10 @@
     <Compile Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.Designer.cs">
       <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs" />
+    <Compile Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.Designer.cs">
+      <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.resx">
       <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.resx">
+      <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

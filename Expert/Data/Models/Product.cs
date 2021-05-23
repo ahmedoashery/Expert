@@ -16,11 +16,13 @@ namespace Expert.Data.Models
         public int Supplier_id { get; set; }
         public Supplier Supplier { get; set; }
 
-        public virtual IList<SalesOrder> SalesOrders { get; set; }
+        public virtual IList<SaleOrder> SalesOrders { get; set; }
+        public virtual IList<PurchaseOrder> PurchasesOrders{ get; set; }
 
         public Product()
         {
-            SalesOrders = new List<SalesOrder>();
+            SalesOrders = new List<SaleOrder>();
+            PurchasesOrders = new List<PurchaseOrder>();
         }
     }
 }
