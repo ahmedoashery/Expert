@@ -10,5 +10,8 @@
 
         public int Category_id { get; set; }
         public Category Category { get; set; }
+
+        public int Supplier_id { get; set; }
+        public Supplier Supplier { get; set; }
     }
 }
