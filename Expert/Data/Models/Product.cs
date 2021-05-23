@@ -1,4 +1,6 @@
-﻿namespace Expert.Data.Models
+﻿using System.Collections.Generic;
+
+namespace Expert.Data.Models
 {
     public class Product
     {
@@ -13,5 +15,12 @@
 
         public int Supplier_id { get; set; }
         public Supplier Supplier { get; set; }
+
+        public virtual IList<SalesOrder> SalesOrders { get; set; }
+
+        public Product()
+        {
+            SalesOrders = new List<SalesOrder>();
+        }
     }
 }

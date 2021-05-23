@@ -18,6 +18,15 @@ namespace Expert.Data.Models.Configurations
                 .HasColumnType("nvarchar")
                 .HasMaxLength(255)
                 .IsUnicode(true);
+
+            HasMany(o => o.Products)
+                .WithMany(p => p.SalesOrders)
+                .Map(m =>
+                {
+                    m.ToTable("Sales_Orders_Details");
+                    m.MapLeftKey("Order_id");
+                    m.MapRightKey("Product_id");
+                });
         }
     }
 }

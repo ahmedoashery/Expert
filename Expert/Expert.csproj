@@ -122,6 +122,10 @@
     <Compile Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.Designer.cs">
       <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.cs" />
+    <Compile Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.Designer.cs">
+      <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.resx">
       <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.resx">
+      <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
