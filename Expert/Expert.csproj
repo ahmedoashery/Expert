@@ -82,6 +82,8 @@
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
     <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
+    <Compile Include="Data\Models\Customer.cs" />
+    <Compile Include="Data\Models\SalesOrder.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Supplier.cs" />
     <Compile Include="Main.cs">
