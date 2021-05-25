@@ -1,79 +1,50 @@
 ﻿using DevExpress.XtraBars;
-using DevExpress.XtraBars.Docking2010.Views;
-using DevExpress.XtraBars.Navigation;
-using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Expert
 {
-    public partial class Main : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class Main : RibbonForm
     {
-        XtraUserControl employeesUserControl;
-        XtraUserControl customersUserControl;
+        readonly List<Control> views = new List<Control>();
         public Main()
         {
             InitializeComponent();
-            employeesUserControl = CreateUserControl("Employees");
-            customersUserControl = CreateUserControl("Customers");
-            accordionControl.SelectedElement = employeesAccordionControlElement;
         }
-        XtraUserControl CreateUserControl(string text)
+
+        private void RegisterView(string name = null)
         {
-            XtraUserControl result = new XtraUserControl();
-            result.Name = text.ToLower() + "UserControl";
-            result.Text = text;
-            LabelControl label = new LabelControl();
-            label.Parent = result;
-            label.Appearance.Font = new Font("Tahoma", 25.25F);
-            label.Appearance.ForeColor = Color.Gray;
-            label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.AutoSizeMode = LabelAutoSizeMode.None;
-            label.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            label.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            label.Text = text;
-            return result;
-        }
-        void accordionControl_SelectedElementChanged(object sender, SelectedElementChangedEventArgs e)
-        {
-            if (e.Element == null) return;
-            XtraUserControl userControl = e.Element.Text == "Employees" ? employeesUserControl : customersUserControl;
-            tabbedView.AddDocument(userControl);
-            tabbedView.ActivateDocument(userControl);
-        }
-        void barButtonNavigation_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
-            accordionControl.SelectedElement = mainAccordionGroup.Elements[barItemIndex];
-        }
-        void tabbedView_DocumentClosed(object sender, DocumentEventArgs e)
-        {
-            RecreateUserControls(e);
-            SetAccordionSelectedElement(e);
-        }
-        void SetAccordionSelectedElement(DocumentEventArgs e)
-        {
-            if (tabbedView.Documents.Count != 0)
+            Type type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).First(x => x.Name == name); //target type
+            Activator.CreateInstance(type);
+            object o = Activator.CreateInstance(type); // an instance of target type
+            Control view = (Control)o;
+            view.Text = o.GetType().Name;
+
+            if (MainTabbedView.Documents.Exists(d => d.Control.Name == view.Name) == false)
             {
-                if (e.Document.Caption == "Employees") accordionControl.SelectedElement = customersAccordionControlElement;
-                else accordionControl.SelectedElement = employeesAccordionControlElement;
+                MainTabbedView.AddDocument(view);
             }
-            else
-            {
-                accordionControl.SelectedElement = null;
-            }
+
+            views.Add(view);
         }
-        void RecreateUserControls(DocumentEventArgs e)
+
+        private void BarItemNavigation_Click(object sender, ItemClickEventArgs e)
         {
-            if (e.Document.Caption == "Employees") employeesUserControl = CreateUserControl("Employees");
-            else customersUserControl = CreateUserControl("Customers");
+            var linkName = e.Link.Item.Name;
+
+            if (views.Count == 0 || views.Exists(v => v.Name == linkName) == false)
+            {
+                var viewName = linkName.Substring(0, linkName.Length - 4);
+                RegisterView(viewName);
+            }
+
+            foreach (var view in views)
+            {
+                if ((view.Name + "Link") == linkName) MainTabbedView.ActivateDocument(view);
+            }
         }
     }
 }

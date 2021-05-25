@@ -17,7 +17,7 @@ namespace Expert.Data.Models
         public Supplier Supplier { get; set; }
 
         public virtual IList<SaleOrder> SalesOrders { get; set; }
-        public virtual IList<PurchaseOrder> PurchasesOrders{ get; set; }
+        public virtual IList<PurchaseOrder> PurchasesOrders { get; set; }
 
         public Product()
         {

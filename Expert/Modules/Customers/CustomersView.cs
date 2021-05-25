@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Expert.Modules.Inventory
+namespace Expert.Modules.Customers
 {
-    public partial class InventoryView : DevExpress.XtraEditors.XtraUserControl
+    public partial class CustomersView : DevExpress.XtraEditors.XtraUserControl
     {
-        public InventoryView()
+        public CustomersView()
         {
             InitializeComponent();
 
