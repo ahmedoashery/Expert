@@ -1,23 +1,19 @@
-﻿using DevExpress.XtraBars;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Expert.Modules.Inventory
+namespace Expert.Modules.Stock
 {
-    public partial class InventoryView : DevExpress.XtraEditors.XtraUserControl
+    public partial class StockView : DevExpress.XtraEditors.XtraUserControl
     {
-        public InventoryView()
+        public StockView()
         {
             InitializeComponent();
 
             gridControl.DataSource = GetDataSource();
-            BindingList<Customer> dataSource = GetDataSource();
-            gridControl.DataSource = dataSource;
-            bsiRecordsCount.Caption = "RECORDS : " + dataSource.Count;
         }
-        void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
-            gridControl.ShowRibbonPrintPreview();
+            if (e.Button.Properties.Caption == "Print") gridControl.ShowRibbonPrintPreview();
         }
         public BindingList<Customer> GetDataSource()
         {

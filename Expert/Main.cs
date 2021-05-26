@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
@@ -9,42 +10,44 @@ namespace Expert
 {
     public partial class Main : RibbonForm
     {
-        readonly List<Control> views = new List<Control>();
         public Main()
         {
             InitializeComponent();
+            MainTabbedView.QueryControl += MainTabbedView_QueryControl;
         }
 
-        private void RegisterView(string name = null)
+        private Control RegisterView(string name = null)
         {
-            Type type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).First(x => x.Name == name); //target type
-            Activator.CreateInstance(type);
-            object o = Activator.CreateInstance(type); // an instance of target type
-            Control view = (Control)o;
-            view.Text = o.GetType().Name;
-
-            if (MainTabbedView.Documents.Exists(d => d.Control.Name == view.Name) == false)
-            {
-                MainTabbedView.AddDocument(view);
-            }
-
-            views.Add(view);
+            if (name == null) return null;
+            Type type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).FirstOrDefault(x => x.Name == name); //target type
+            if (type == null) return null;
+            object obj = Activator.CreateInstance(type); // an instance of target type
+            Control view = (Control)obj;
+            view.Text = view.Name;
+            return view;
         }
 
         private void BarItemNavigation_Click(object sender, ItemClickEventArgs e)
         {
             var linkName = e.Link.Item.Name;
+            var viewName = linkName.Substring(0, linkName.Length - 4);
+            //MainTabbedView.AddOrActivateDocument(d => d.Caption == viewName, () => RegisterView(viewName));   // withou deferred loading
 
-            if (views.Count == 0 || views.Exists(v => v.Name == linkName) == false)
-            {
-                var viewName = linkName.Substring(0, linkName.Length - 4);
-                RegisterView(viewName);
-            }
+            BaseDocument document = MainTabbedView.Documents.Exists(d => d.Caption == viewName) ?
+                                            MainTabbedView.Documents.FirstOrDefault(d => d.Caption == viewName) : null;
+            if (document == null)
+                document = MainTabbedView.AddDocument(viewName, null);
+            
+            MainTabbedView.Controller.Activate(document);
 
-            foreach (var view in views)
-            {
-                if ((view.Name + "Link") == linkName) MainTabbedView.ActivateDocument(view);
-            }
+        }
+
+        private void MainTabbedView_QueryControl(object sender, QueryControlEventArgs e)
+        {
+            Control control = RegisterView(e.Document.Caption);
+            e.Control = control;
+            if (e.Control == null)
+                e.Control = new Control();
         }
     }
 }
