@@ -35,6 +35,9 @@ namespace Expert
             this.MainMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.btnEnglishLang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnArabicLang = new DevExpress.XtraBars.BarButtonItem();
             this.CustomersViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SuppliersViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SalesReportsViewLink = new DevExpress.XtraBars.BarButtonItem();
@@ -48,6 +51,7 @@ namespace Expert
             this.CustomerPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SupplierPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.StockViewLink = new DevExpress.XtraBars.BarButtonItem();
+            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.StockTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CustoermsAndSuppliersTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -67,6 +71,7 @@ namespace Expert
             this.MainDocumentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDockManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainTabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDocumentManager)).BeginInit();
@@ -77,10 +82,12 @@ namespace Expert
             this.MainRibbonControl.ApplicationButtonDropDownControl = this.MainMenu;
             this.MainRibbonControl.CaptionBarItemLinks.Add(this.skinDropDownButtonItem1);
             this.MainRibbonControl.CaptionBarItemLinks.Add(this.skinPaletteDropDownButtonItem1);
+            this.MainRibbonControl.CaptionBarItemLinks.Add(this.barSubItem1);
             this.MainRibbonControl.ExpandCollapseItem.Id = 0;
             this.MainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.skinDropDownButtonItem1,
             this.skinPaletteDropDownButtonItem1,
+            this.barSubItem1,
             this.MainRibbonControl.ExpandCollapseItem,
             this.MainRibbonControl.SearchEditItem,
             this.CustomersViewLink,
@@ -95,16 +102,21 @@ namespace Expert
             this.PurchasesReturnsViewLink,
             this.CustomerPayViewLink,
             this.SupplierPayViewLink,
-            this.StockViewLink});
+            this.StockViewLink,
+            this.btnEnglishLang,
+            this.btnArabicLang});
             this.MainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.MainRibbonControl.MaxItemId = 74;
+            this.MainRibbonControl.MaxItemId = 78;
             this.MainRibbonControl.Name = "MainRibbonControl";
             this.MainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
             this.DataRibbonPage,
             this.ReportsRibbonPage,
             this.SettingsRibbonPage});
-            this.MainRibbonControl.SearchItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
+            this.MainRibbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemSearchControl1});
+            this.MainRibbonControl.SearchItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+                | System.Windows.Forms.Keys.S));
             this.MainRibbonControl.ShowSearchItem = true;
             this.MainRibbonControl.Size = new System.Drawing.Size(790, 143);
             this.MainRibbonControl.StatusBar = this.ribbonStatusBar;
@@ -124,6 +136,30 @@ namespace Expert
             this.skinPaletteDropDownButtonItem1.Enabled = false;
             this.skinPaletteDropDownButtonItem1.Id = 54;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Id = 74;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.btnEnglishLang, "EN"),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnArabicLang)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // btnEnglishLang
+            // 
+            this.btnEnglishLang.Caption = "EN";
+            this.btnEnglishLang.Id = 75;
+            this.btnEnglishLang.Name = "btnEnglishLang";
+            this.btnEnglishLang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LanguageChange_ItemClick);
+            // 
+            // btnArabicLang
+            // 
+            this.btnArabicLang.Caption = "AR";
+            this.btnArabicLang.Id = 76;
+            this.btnArabicLang.Name = "btnArabicLang";
+            this.btnArabicLang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LanguageChange_ItemClick);
             // 
             // CustomersViewLink
             // 
@@ -233,6 +269,14 @@ namespace Expert
             this.StockViewLink.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("StockViewLink.ImageOptions.LargeImage")));
             this.StockViewLink.Name = "StockViewLink";
             this.StockViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
+            // 
+            // repositoryItemSearchControl1
+            // 
+            this.repositoryItemSearchControl1.AutoHeight = false;
+            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
             // 
             // ribbonPage
             // 
@@ -370,10 +414,10 @@ namespace Expert
             this.Controls.Add(this.MainRibbonControl);
             this.Name = "Main";
             this.Ribbon = this.MainRibbonControl;
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StatusBar = this.ribbonStatusBar;
             ((System.ComponentModel.ISupportInitialize)(this.MainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDockManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainTabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDocumentManager)).EndInit();
@@ -417,5 +461,9 @@ namespace Expert
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup CustomersandSuppliersReportsRibbonPageGroup;
         private DevExpress.XtraBars.BarButtonItem StockViewLink;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup StockRibbonPageGroup;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem btnEnglishLang;
+        private DevExpress.XtraBars.BarButtonItem btnArabicLang;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
     }
 }

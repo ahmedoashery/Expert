@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v20.2" />
     <Reference Include="DevExpress.Data.Desktop.v20.2" />
     <Reference Include="DevExpress.Data.v20.2" />
@@ -65,7 +66,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -97,6 +101,12 @@
     <Compile Include="Data\Models\SaleOrder.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Supplier.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202105231523212_InitializeDatabase.cs" />
     <Compile Include="Migrations\202105231523212_InitializeDatabase.Designer.cs">
       <DependentUpon>202105231523212_InitializeDatabase.cs</DependentUpon>
@@ -160,6 +170,10 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\CultureHandler.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,8 +1,9 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
+using Expert.Services;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Expert
         public Main()
         {
             InitializeComponent();
+            HandleUIByLanguage();
             MainTabbedView.QueryControl += MainTabbedView_QueryControl;
         }
 
@@ -39,7 +41,6 @@ namespace Expert
                 document = MainTabbedView.AddDocument(viewName, null);
             
             MainTabbedView.Controller.Activate(document);
-
         }
 
         private void MainTabbedView_QueryControl(object sender, QueryControlEventArgs e)
@@ -48,6 +49,29 @@ namespace Expert
             e.Control = control;
             if (e.Control == null)
                 e.Control = new Control();
+        }
+
+        private void LanguageChange_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var changeMsg = e.Link.Item.Caption == "EN" ? 
+                                                        "اعادة تشغيل البرنامج وتغيير اللغة ؟"
+                                                         : "Restart Application To Change Language ?";
+
+            if (XtraMessageBox.Show(changeMsg, "", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                CultureHandler.ChangeCultre(e.Link.Item.Caption);
+            }
+            return;
+        }
+
+        private void HandleUIByLanguage()
+        {
+            var lang = Properties.Settings.Default.Language;
+            if (lang == "AR") {
+                RightToLeft = RightToLeft.Yes;
+                btnArabicLang.Enabled = false; 
+            }
+            if (lang == "EN") btnEnglishLang.Enabled = false;
         }
     }
 }
