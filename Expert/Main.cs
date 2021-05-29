@@ -2,8 +2,11 @@
 using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
+using Expert.Properties;
 using Expert.Services;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,10 +16,39 @@ namespace Expert
     {
         public Main()
         {
+            // Show a splashscreen.
+            SplachScreen();
+
             InitializeComponent();
-            HandleUIByLanguage();
-            Username.Caption = Properties.Settings.Default.AuthenticatedUser;
+
+            //Close the splashscreen
+            SplashScreenManager.CloseForm();
+            // depends on culture settings
+            HandleUIByCulture();
+            // authenticated user
+            Username.Caption = Settings.Default.AuthenticatedUser;
+            // initialize documents instances
             MainTabbedView.QueryControl += MainTabbedView_QueryControl;
+        }
+
+        private void SplachScreen()
+        {
+            FluentSplashScreenOptions op = new FluentSplashScreenOptions();
+            op.Title = "When Only The Best Will Do";
+            op.Subtitle = "DevExpress WinForms Controls";
+            op.RightFooter = "Starting...";
+            op.LeftFooter = "Copyright © 2000 - 2020 Developer Express Inc." + Environment.NewLine + "All Rights reserved.";
+            op.LoadingIndicatorType = FluentLoadingIndicatorType.Dots;
+            op.OpacityColor = Color.Gray;
+            op.Opacity = 130;
+            //op.LogoImageOptions.SvgImage = Resources.Logo;
+
+            SplashScreenManager.ShowFluentSplashScreen(
+                op,
+                parentForm: this,
+                useFadeIn: true,
+                useFadeOut: true
+            );
         }
 
         private Control RegisterView(string name = null)
@@ -65,7 +97,7 @@ namespace Expert
             return;
         }
 
-        private void HandleUIByLanguage()
+        private void HandleUIByCulture()
         {
             var lang = Properties.Settings.Default.Language;
             if (lang == "AR") {

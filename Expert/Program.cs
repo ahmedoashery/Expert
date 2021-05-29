@@ -1,4 +1,5 @@
-﻿using Expert.Services;
+﻿using DevExpress.XtraSplashScreen;
+using Expert.Services;
 using System;
 using System.Globalization;
 using System.Threading;
@@ -17,7 +18,6 @@ namespace Expert
             // set application culture for ui and data.
             CultureHandler culture = new CultureHandler();
             culture.ApplyCulture();
-
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -51,6 +51,9 @@ namespace Expert
             this.CustomerPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SupplierPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.StockViewLink = new DevExpress.XtraBars.BarButtonItem();
+            this.Username = new DevExpress.XtraBars.BarSubItem();
+            this.LogoutButton = new DevExpress.XtraBars.BarButtonItem();
+            this.UsernameLabel = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.StockTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CustoermsAndSuppliersTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -69,9 +72,6 @@ namespace Expert
             this.customersAccordionControlElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.MainTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.MainDocumentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.Username = new DevExpress.XtraBars.BarSubItem();
-            this.LogoutButton = new DevExpress.XtraBars.BarButtonItem();
-            this.UsernameLabel = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.MainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
@@ -276,6 +276,26 @@ namespace Expert
             this.StockViewLink.Name = "StockViewLink";
             this.StockViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
+            // Username
+            // 
+            this.Username.Id = 78;
+            this.Username.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.LogoutButton)});
+            this.Username.Name = "Username";
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Caption = "Logout";
+            this.LogoutButton.Id = 79;
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Logoutbutton_ItemClick);
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.Caption = "Username : ";
+            this.UsernameLabel.Id = 80;
+            this.UsernameLabel.Name = "UsernameLabel";
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -403,6 +423,7 @@ namespace Expert
             // 
             // MainTabbedView
             // 
+            this.MainTabbedView.EnableFreeLayoutMode = DevExpress.Utils.DefaultBoolean.True;
             this.MainTabbedView.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.MainTabbedView_QueryControl);
             // 
             // MainDocumentManager
@@ -412,26 +433,6 @@ namespace Expert
             this.MainDocumentManager.View = this.MainTabbedView;
             this.MainDocumentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.MainTabbedView});
-            // 
-            // Username
-            // 
-            this.Username.Id = 78;
-            this.Username.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.LogoutButton)});
-            this.Username.Name = "Username";
-            // 
-            // LogoutButton
-            // 
-            this.LogoutButton.Caption = "Logout";
-            this.LogoutButton.Id = 79;
-            this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Logoutbutton_ItemClick);
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.Caption = "Username : ";
-            this.UsernameLabel.Id = 80;
-            this.UsernameLabel.Name = "UsernameLabel";
             // 
             // Main
             // 
