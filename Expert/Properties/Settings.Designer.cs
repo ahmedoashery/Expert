@@ -25,7 +25,7 @@ namespace Expert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en-EN")]
+        [global::System.Configuration.DefaultSettingValueAttribute("EN")]
         public string Language {
             get {
                 return ((string)(this["Language"]));
