@@ -101,6 +101,7 @@
     <Compile Include="Data\Models\SaleOrder.cs" />
     <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Supplier.cs" />
+    <Compile Include="Data\Models\User.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +171,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\Authenticate.cs" />
     <Compile Include="Services\CultureHandler.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

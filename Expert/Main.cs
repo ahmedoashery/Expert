@@ -14,7 +14,7 @@ namespace Expert
         public Main()
         {
             InitializeComponent();
-            HandleUIByLanguage();
+            //HandleUIByLanguage();
             MainTabbedView.QueryControl += MainTabbedView_QueryControl;
         }
 
