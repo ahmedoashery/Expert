@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">en-EN</Value>
+      <Value Profile="(Default)">EN</Value>
     </Setting>
     <Setting Name="ChangeLanguageMessage" Type="System.String" Scope="User">
       <Value Profile="(Default)">Restart Application To Change Language ?</Value>
