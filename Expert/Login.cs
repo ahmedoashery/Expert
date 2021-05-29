@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Menu;
 using Expert.Services;
+using System;
 using System.Windows.Forms;
 
 namespace Expert
@@ -29,7 +30,7 @@ namespace Expert
             CultureHandler.ChangeCultre(e.Item.Caption);
         }
 
-        private void InitUiElements ()
+        private void InitUiElements()
         {
             if (Properties.Settings.Default.Language == "AR")
             {
@@ -49,7 +50,16 @@ namespace Expert
 
         private void LoginButton_Click(object sender, System.EventArgs e)
         {
-
+            Authenticate auth = new Authenticate();
+            if (auth.Check(textUserName.Text, textPassword.Text))
+            {
+                MessageBox.Show("Authenticated Successfully.");
+                Properties.Settings.Default.Authenticated = true;
+                Properties.Settings.Default.AuthenticatedUser = textUserName.Text;
+                Properties.Settings.Default.Save();
+                Application.Restart();
+                Environment.Exit(0);
+            }
         }
     }
 }

@@ -29,6 +29,9 @@ namespace Expert
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textUserName = new DevExpress.XtraEditors.TextEdit();
@@ -48,6 +51,7 @@ namespace Expert
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textUserName.Properties)).BeginInit();
@@ -64,6 +68,7 @@ namespace Expert
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -85,22 +90,30 @@ namespace Expert
             // 
             // textUserName
             // 
-            this.textUserName.EditValue = "myEmail@mail.com";
+            this.textUserName.EditValue = "";
             this.textUserName.Location = new System.Drawing.Point(119, 87);
             this.textUserName.Name = "textUserName";
             this.textUserName.Size = new System.Drawing.Size(314, 20);
             this.textUserName.StyleController = this.layoutControl1;
             this.textUserName.TabIndex = 4;
+            conditionValidationRule1.CaseSensitive = true;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProvider1.SetValidationRule(this.textUserName, conditionValidationRule1);
             // 
             // textPassword
             // 
-            this.textPassword.EditValue = "Password";
+            this.textPassword.EditValue = "";
             this.textPassword.Location = new System.Drawing.Point(119, 111);
             this.textPassword.Name = "textPassword";
             this.textPassword.Properties.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(314, 20);
             this.textPassword.StyleController = this.layoutControl1;
             this.textPassword.TabIndex = 5;
+            conditionValidationRule2.CaseSensitive = true;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Less;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            this.dxValidationProvider1.SetValidationRule(this.textPassword, conditionValidationRule2);
             // 
             // checkKeepMe
             // 
@@ -281,6 +294,7 @@ namespace Expert
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,5 +319,6 @@ namespace Expert
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
     }
 }

@@ -8,5 +8,11 @@
     <Setting Name="ChangeLanguageMessage" Type="System.String" Scope="User">
       <Value Profile="(Default)">Restart Application To Change Language ?</Value>
     </Setting>
+    <Setting Name="Authenticated" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AuthenticatedUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

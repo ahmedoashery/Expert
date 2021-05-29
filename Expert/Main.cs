@@ -14,7 +14,8 @@ namespace Expert
         public Main()
         {
             InitializeComponent();
-            //HandleUIByLanguage();
+            HandleUIByLanguage();
+            Username.Caption = Properties.Settings.Default.AuthenticatedUser;
             MainTabbedView.QueryControl += MainTabbedView_QueryControl;
         }
 
@@ -69,9 +70,27 @@ namespace Expert
             var lang = Properties.Settings.Default.Language;
             if (lang == "AR") {
                 RightToLeft = RightToLeft.Yes;
-                btnArabicLang.Enabled = false; 
+                btnArabicLang.Enabled = false;
+                UsernameLabel.Caption = "مستخدم : ";
             }
             if (lang == "EN") btnEnglishLang.Enabled = false;
+        }
+
+        private void Logoutbutton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var changeMsg = e.Link.Item.Caption == "EN" ?
+                                                           "اعادة تشغيل البرنامج وتغيير اللغة ؟"
+                                                            : "Restart Application To Change Language ?";
+            if (XtraMessageBox.Show(changeMsg, "", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Properties.Settings.Default.Authenticated = false;
+                Properties.Settings.Default.AuthenticatedUser = "";
+                Properties.Settings.Default.Save();
+                Application.Restart();
+                Environment.Exit(0);
+            }
+            else
+                return;
         }
     }
 }

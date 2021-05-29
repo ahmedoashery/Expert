@@ -46,5 +46,29 @@ namespace Expert.Properties {
                 this["ChangeLanguageMessage"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Authenticated {
+            get {
+                return ((bool)(this["Authenticated"]));
+            }
+            set {
+                this["Authenticated"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AuthenticatedUser {
+            get {
+                return ((string)(this["AuthenticatedUser"]));
+            }
+            set {
+                this["AuthenticatedUser"] = value;
+            }
+        }
     }
 }

@@ -51,7 +51,6 @@ namespace Expert
             this.CustomerPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SupplierPayViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.StockViewLink = new DevExpress.XtraBars.BarButtonItem();
-            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.StockTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CustoermsAndSuppliersTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,6 +61,7 @@ namespace Expert
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CustomersandSuppliersReportsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.SettingsRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.MainDockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.mainAccordionGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -69,6 +69,9 @@ namespace Expert
             this.customersAccordionControlElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.MainTabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.MainDocumentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.Username = new DevExpress.XtraBars.BarSubItem();
+            this.LogoutButton = new DevExpress.XtraBars.BarButtonItem();
+            this.UsernameLabel = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.MainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
@@ -104,9 +107,12 @@ namespace Expert
             this.SupplierPayViewLink,
             this.StockViewLink,
             this.btnEnglishLang,
-            this.btnArabicLang});
+            this.btnArabicLang,
+            this.Username,
+            this.LogoutButton,
+            this.UsernameLabel});
             this.MainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.MainRibbonControl.MaxItemId = 78;
+            this.MainRibbonControl.MaxItemId = 81;
             this.MainRibbonControl.Name = "MainRibbonControl";
             this.MainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
@@ -270,14 +276,6 @@ namespace Expert
             this.StockViewLink.Name = "StockViewLink";
             this.StockViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
-            // repositoryItemSearchControl1
-            // 
-            this.repositoryItemSearchControl1.AutoHeight = false;
-            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
-            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -350,8 +348,18 @@ namespace Expert
             this.SettingsRibbonPage.Name = "SettingsRibbonPage";
             this.SettingsRibbonPage.Text = "Settings";
             // 
+            // repositoryItemSearchControl1
+            // 
+            this.repositoryItemSearchControl1.AutoHeight = false;
+            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
+            // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.UsernameLabel);
+            this.ribbonStatusBar.ItemLinks.Add(this.Username);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.MainRibbonControl;
@@ -404,6 +412,26 @@ namespace Expert
             this.MainDocumentManager.View = this.MainTabbedView;
             this.MainDocumentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.MainTabbedView});
+            // 
+            // Username
+            // 
+            this.Username.Id = 78;
+            this.Username.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.LogoutButton)});
+            this.Username.Name = "Username";
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Caption = "Logout";
+            this.LogoutButton.Id = 79;
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Logoutbutton_ItemClick);
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.Caption = "Username : ";
+            this.UsernameLabel.Id = 80;
+            this.UsernameLabel.Name = "UsernameLabel";
             // 
             // Main
             // 
@@ -465,5 +493,8 @@ namespace Expert
         private DevExpress.XtraBars.BarButtonItem btnEnglishLang;
         private DevExpress.XtraBars.BarButtonItem btnArabicLang;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
+        private DevExpress.XtraBars.BarSubItem Username;
+        private DevExpress.XtraBars.BarButtonItem LogoutButton;
+        private DevExpress.XtraBars.BarStaticItem UsernameLabel;
     }
 }
