@@ -1,18 +1,22 @@
-﻿using Expert.Data.Models;
+﻿using Expert.Data;
+using Expert.Data.Models;
+using System.Data.Entity;
 
 namespace Expert.Services
 {
     public class Authenticate
     {
-        private string username1;
-        private string Username { get => username1; set => username1 = value; }
-
-        private string password1;
-        private string Password { get => password1; set => password1 = value; }
-
+        protected User _user;
+        protected ExpertContext context;
         public Authenticate(User user)
         {
+            _user = user;
+            context = new ExpertContext();
+        }
 
+        private bool Check(string username, string password) 
+        {
+            return true;
         }
     }
 }

@@ -18,6 +18,12 @@ namespace Expert.Data.Models.Configurations
                 .HasMaxLength(50)
                 .IsRequired()
                 .IsUnicode(true);
+
+            Property(u => u.Password)
+                .HasMaxLength(255)
+                .IsRequired()
+                .HasColumnType("nvarchar")
+                .IsUnicode(true);
         }
     }
 }

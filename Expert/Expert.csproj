@@ -145,6 +145,10 @@
     <Compile Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.Designer.cs">
       <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105290038302_AddUsersTable.cs" />
+    <Compile Include="Migrations\202105290038302_AddUsersTable.Designer.cs">
+      <DependentUpon>202105290038302_AddUsersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modules\Customers\CustomersView.cs">
       <SubType>UserControl</SubType>
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.resx">
       <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105290038302_AddUsersTable.resx">
+      <DependentUpon>202105290038302_AddUsersTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\SalesOrderView.resx">
       <DependentUpon>SalesOrderView.cs</DependentUpon>
