@@ -23,7 +23,7 @@ namespace Expert
             Application.SetCompatibleTextRenderingDefault(false);
 
             // check authentication
-            var isAuthenticated = false;
+            var isAuthenticated = Properties.Settings.Default.Authenticated;
             if (!isAuthenticated)
                 Application.Run(new Login());
             else

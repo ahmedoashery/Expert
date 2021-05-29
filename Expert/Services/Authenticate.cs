@@ -1,22 +1,26 @@
 ﻿using Expert.Data;
 using Expert.Data.Models;
 using System.Data.Entity;
+using System.Linq;
 
 namespace Expert.Services
 {
     public class Authenticate
     {
-        protected User _user;
         protected ExpertContext context;
-        public Authenticate(User user)
+        public Authenticate()
         {
-            _user = user;
             context = new ExpertContext();
         }
 
-        private bool Check(string username, string password) 
+        public bool Check(string username, string password)
         {
-            return true;
+            var foundUser = context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            if (foundUser != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
