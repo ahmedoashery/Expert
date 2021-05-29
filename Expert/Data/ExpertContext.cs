@@ -16,6 +16,7 @@ namespace Expert.Data
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<SaleOrder> SalesOrders { get; set; }
         public virtual DbSet<PurchaseOrder> PurchasesOrders { get; set; }
+        public virtual DbSet<User> Users{ get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
