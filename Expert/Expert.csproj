@@ -156,6 +156,12 @@
     <Compile Include="Modules\Customers\CustomersView.Designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Customers\CustomersListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Customers\CustomersListView.Designer.cs">
+      <DependentUpon>CustomersListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Sales\SalesOrderView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105290038302_AddUsersTable.resx">
       <DependentUpon>202105290038302_AddUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Customers\CustomersListView.resx">
+      <DependentUpon>CustomersListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Customers\CustomersView.resx">
+      <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\SalesOrderView.resx">
       <DependentUpon>SalesOrderView.cs</DependentUpon>

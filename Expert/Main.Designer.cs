@@ -171,7 +171,7 @@ namespace Expert
             // 
             this.CustomersViewLink.Caption = "Customers";
             this.CustomersViewLink.Id = 60;
-            this.CustomersViewLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CustomersViewLink.ImageOptions.SvgImage")));
+            this.CustomersViewLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CustomersListViewLink.ImageOptions.SvgImage")));
             this.CustomersViewLink.Name = "CustomersViewLink";
             this.CustomersViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 

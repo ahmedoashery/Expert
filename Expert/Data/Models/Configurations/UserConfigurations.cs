@@ -2,7 +2,7 @@
 
 namespace Expert.Data.Models.Configurations
 {
-    class UserConfigurations: EntityTypeConfiguration<User>
+    class UserConfigurations : EntityTypeConfiguration<User>
     {
         public UserConfigurations()
         {

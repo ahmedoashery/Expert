@@ -20,7 +20,7 @@ namespace Expert
         private void CultureButton_Click(object sender, EventArgs e)
         {
             DXPopupMenu popupMenu = new DXPopupMenu();
-            popupMenu.Items.Add(new DXMenuItem() { Caption = "English", Tag= "EN" });
+            popupMenu.Items.Add(new DXMenuItem() { Caption = "English", Tag = "EN" });
             popupMenu.Items.Add(new DXMenuCheckItem() { Caption = "العربية", Tag = "AR" });
             CultureButton.DropDownControl = popupMenu;
 

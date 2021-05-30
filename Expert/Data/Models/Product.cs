@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Expert.Data.Models
 {
@@ -16,13 +17,13 @@ namespace Expert.Data.Models
         public int Supplier_id { get; set; }
         public Supplier Supplier { get; set; }
 
-        public virtual IList<SaleOrder> SalesOrders { get; set; }
-        public virtual IList<PurchaseOrder> PurchasesOrders { get; set; }
+        public virtual ObservableCollection<SaleOrder> SalesOrders { get; set; }
+        public virtual ObservableCollection<PurchaseOrder> PurchasesOrders { get; set; }
 
         public Product()
         {
-            SalesOrders = new List<SaleOrder>();
-            PurchasesOrders = new List<PurchaseOrder>();
+            SalesOrders = new ObservableCollection<SaleOrder>();
+            PurchasesOrders = new ObservableCollection<PurchaseOrder>();
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Expert.Data;
-using Expert.Data.Models;
-using System.Data.Entity;
 using System.Linq;
 
 namespace Expert.Services

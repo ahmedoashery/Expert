@@ -1,8 +1,5 @@
-﻿using DevExpress.XtraSplashScreen;
-using Expert.Services;
+﻿using Expert.Services;
 using System;
-using System.Globalization;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Expert

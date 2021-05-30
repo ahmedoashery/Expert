@@ -72,7 +72,7 @@ namespace Expert
                                             MainTabbedView.Documents.FirstOrDefault(d => d.Caption == viewName) : null;
             if (document == null)
                 document = MainTabbedView.AddDocument(viewName, null);
-            
+
             MainTabbedView.Controller.Activate(document);
         }
 
@@ -86,8 +86,8 @@ namespace Expert
 
         private void LanguageChange_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var changeMsg = e.Link.Item.Caption == "EN" ? 
-                                                        "اعادة تشغيل البرنامج وتغيير اللغة ؟"
+            var changeMsg = e.Link.Item.Caption == "EN" ?
+                                                        "اعادة تشغيل البرنامج لتغيير اللغة ؟"
                                                          : "Restart Application To Change Language ?";
 
             if (XtraMessageBox.Show(changeMsg, "", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -99,8 +99,9 @@ namespace Expert
 
         private void HandleUIByCulture()
         {
-            var lang = Properties.Settings.Default.Language;
-            if (lang == "AR") {
+            var lang = Settings.Default.Language;
+            if (lang == "AR")
+            {
                 RightToLeft = RightToLeft.Yes;
                 btnArabicLang.Enabled = false;
                 UsernameLabel.Caption = "مستخدم : ";
@@ -110,14 +111,12 @@ namespace Expert
 
         private void Logoutbutton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var changeMsg = e.Link.Item.Caption == "EN" ?
-                                                           "اعادة تشغيل البرنامج وتغيير اللغة ؟"
-                                                            : "Restart Application To Change Language ?";
+            var changeMsg = e.Link.Item.Caption == "EN" ? "Restart Application To Change Language ?" : "اعادة تشغيل البرنامج وتغيير اللغة ؟";
             if (XtraMessageBox.Show(changeMsg, "", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                Properties.Settings.Default.Authenticated = false;
-                Properties.Settings.Default.AuthenticatedUser = "";
-                Properties.Settings.Default.Save();
+                Settings.Default.Authenticated = false;
+                Settings.Default.AuthenticatedUser = "";
+                Settings.Default.Save();
                 Application.Restart();
                 Environment.Exit(0);
             }
