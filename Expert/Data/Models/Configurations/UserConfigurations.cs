@@ -1,14 +1,19 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Expert.Data.Models.Configurations
 {
-    class UserConfigurations : EntityTypeConfiguration<User>
+    public class UserConfigurations : EntityTypeConfiguration<User>
     {
         public UserConfigurations()
         {
             ToTable("Users");
 
-            HasKey(u => u.Userid);
+            HasKey(u => u.ID);
 
             HasIndex(u => u.Username)
                 .IsUnique();
@@ -17,13 +22,15 @@ namespace Expert.Data.Models.Configurations
                 .HasColumnType("nvarchar")
                 .HasMaxLength(50)
                 .IsRequired()
-                .IsUnicode(true);
+                .IsUnicode();
 
             Property(u => u.Password)
-                .HasMaxLength(255)
-                .IsRequired()
                 .HasColumnType("nvarchar")
-                .IsUnicode(true);
+                .HasMaxLength(200)
+                .IsRequired()
+                .IsUnicode();
+
+            
         }
     }
 }

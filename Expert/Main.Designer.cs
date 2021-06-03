@@ -38,13 +38,13 @@ namespace Expert
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btnEnglishLang = new DevExpress.XtraBars.BarButtonItem();
             this.btnArabicLang = new DevExpress.XtraBars.BarButtonItem();
-            this.CustomersViewLink = new DevExpress.XtraBars.BarButtonItem();
+            this.CustomersListLink = new DevExpress.XtraBars.BarButtonItem();
             this.SuppliersViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SalesReportsViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.PurchasesReportsViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.CustomersReportsViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SuppliersReportsViewLink = new DevExpress.XtraBars.BarButtonItem();
-            this.SalesOrderViewLink = new DevExpress.XtraBars.BarButtonItem();
+            this.ModuleAUserControlLink = new DevExpress.XtraBars.BarButtonItem();
             this.PurchaseOrdersViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.SalesReturnsViewLink = new DevExpress.XtraBars.BarButtonItem();
             this.PurchasesReturnsViewLink = new DevExpress.XtraBars.BarButtonItem();
@@ -93,13 +93,13 @@ namespace Expert
             this.barSubItem1,
             this.MainRibbonControl.ExpandCollapseItem,
             this.MainRibbonControl.SearchEditItem,
-            this.CustomersViewLink,
+            this.CustomersListLink,
             this.SuppliersViewLink,
             this.SalesReportsViewLink,
             this.PurchasesReportsViewLink,
             this.CustomersReportsViewLink,
             this.SuppliersReportsViewLink,
-            this.SalesOrderViewLink,
+            this.ModuleAUserControlLink,
             this.PurchaseOrdersViewLink,
             this.SalesReturnsViewLink,
             this.PurchasesReturnsViewLink,
@@ -124,7 +124,7 @@ namespace Expert
             this.MainRibbonControl.SearchItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.S));
             this.MainRibbonControl.ShowSearchItem = true;
-            this.MainRibbonControl.Size = new System.Drawing.Size(790, 143);
+            this.MainRibbonControl.Size = new System.Drawing.Size(790, 158);
             this.MainRibbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // MainMenu
@@ -139,7 +139,6 @@ namespace Expert
             // 
             // skinPaletteDropDownButtonItem1
             // 
-            this.skinPaletteDropDownButtonItem1.Enabled = false;
             this.skinPaletteDropDownButtonItem1.Id = 54;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
@@ -167,13 +166,13 @@ namespace Expert
             this.btnArabicLang.Name = "btnArabicLang";
             this.btnArabicLang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.LanguageChange_ItemClick);
             // 
-            // CustomersViewLink
+            // CustomersListLink
             // 
-            this.CustomersViewLink.Caption = "Customers";
-            this.CustomersViewLink.Id = 60;
-            this.CustomersViewLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CustomersListViewLink.ImageOptions.SvgImage")));
-            this.CustomersViewLink.Name = "CustomersViewLink";
-            this.CustomersViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
+            this.CustomersListLink.Caption = "Customers";
+            this.CustomersListLink.Id = 60;
+            this.CustomersListLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CustomersListLink.ImageOptions.SvgImage")));
+            this.CustomersListLink.Name = "CustomersListLink";
+            this.CustomersListLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
             // SuppliersViewLink
             // 
@@ -219,14 +218,14 @@ namespace Expert
             this.SuppliersReportsViewLink.Name = "SuppliersReportsViewLink";
             this.SuppliersReportsViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
-            // SalesOrderViewLink
+            // ModuleAUserControlLink
             // 
-            this.SalesOrderViewLink.Caption = "Sales Order";
-            this.SalesOrderViewLink.Id = 66;
-            this.SalesOrderViewLink.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SalesOrderViewLink.ImageOptions.Image")));
-            this.SalesOrderViewLink.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("SalesOrderViewLink.ImageOptions.LargeImage")));
-            this.SalesOrderViewLink.Name = "SalesOrderViewLink";
-            this.SalesOrderViewLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
+            this.ModuleAUserControlLink.Caption = "Sales Order";
+            this.ModuleAUserControlLink.Id = 66;
+            this.ModuleAUserControlLink.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SaleOrderLink.ImageOptions.Image")));
+            this.ModuleAUserControlLink.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("SaleOrderLink.ImageOptions.LargeImage")));
+            this.ModuleAUserControlLink.Name = "ModuleAUserControlLink";
+            this.ModuleAUserControlLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
             // PurchaseOrdersViewLink
             // 
@@ -306,7 +305,7 @@ namespace Expert
             // 
             // StockTransactionsRibbonPageGroup
             // 
-            this.StockTransactionsRibbonPageGroup.ItemLinks.Add(this.SalesOrderViewLink);
+            this.StockTransactionsRibbonPageGroup.ItemLinks.Add(this.ModuleAUserControlLink);
             this.StockTransactionsRibbonPageGroup.ItemLinks.Add(this.PurchaseOrdersViewLink);
             this.StockTransactionsRibbonPageGroup.ItemLinks.Add(this.SalesReturnsViewLink);
             this.StockTransactionsRibbonPageGroup.ItemLinks.Add(this.PurchasesReturnsViewLink);
@@ -336,7 +335,7 @@ namespace Expert
             // 
             // CustomersRibbonPageGroup
             // 
-            this.CustomersRibbonPageGroup.ItemLinks.Add(this.CustomersViewLink);
+            this.CustomersRibbonPageGroup.ItemLinks.Add(this.CustomersListLink);
             this.CustomersRibbonPageGroup.ItemLinks.Add(this.SuppliersViewLink);
             this.CustomersRibbonPageGroup.Name = "CustomersRibbonPageGroup";
             this.CustomersRibbonPageGroup.Text = "Customers and Suppliers";
@@ -380,10 +379,10 @@ namespace Expert
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.UsernameLabel);
             this.ribbonStatusBar.ItemLinks.Add(this.Username);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 575);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.MainRibbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 24);
             // 
             // MainDockManager
             // 
@@ -471,13 +470,13 @@ namespace Expert
         private DevExpress.XtraBars.Ribbon.ApplicationMenu MainMenu;
         private DevExpress.XtraBars.Ribbon.RibbonPage ReportsRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPage SettingsRibbonPage;
-        private DevExpress.XtraBars.BarButtonItem CustomersViewLink;
+        private DevExpress.XtraBars.BarButtonItem CustomersListLink;
         private DevExpress.XtraBars.BarButtonItem SuppliersViewLink;
         private DevExpress.XtraBars.BarButtonItem SalesReportsViewLink;
         private DevExpress.XtraBars.BarButtonItem PurchasesReportsViewLink;
         private DevExpress.XtraBars.BarButtonItem CustomersReportsViewLink;
         private DevExpress.XtraBars.BarButtonItem SuppliersReportsViewLink;
-        private DevExpress.XtraBars.BarButtonItem SalesOrderViewLink;
+        private DevExpress.XtraBars.BarButtonItem ModuleAUserControlLink;
         private DevExpress.XtraBars.BarButtonItem PurchaseOrdersViewLink;
         private DevExpress.XtraBars.BarButtonItem SalesReturnsViewLink;
         private DevExpress.XtraBars.BarButtonItem PurchasesReturnsViewLink;

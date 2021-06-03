@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -12,6 +13,24 @@
     <AssemblyName>Expert</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,10 +53,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="BCrypt.Net-Next, Version=4.0.2.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.2\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v20.2" />
     <Reference Include="DevExpress.Data.Desktop.v20.2" />
     <Reference Include="DevExpress.Data.v20.2" />
     <Reference Include="DevExpress.Images.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.2" />
     <Reference Include="DevExpress.Sparkline.v20.2.Core" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -47,6 +70,9 @@
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v20.2.UI, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,6 +87,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -68,6 +97,16 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
@@ -89,19 +128,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ExpertContext.cs" />
+    <Compile Include="Data\Models\Configurations\OrderConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\UserConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
+    <Compile Include="Data\Models\Customer.cs" />
+    <Compile Include="Data\Models\Order.cs" />
+    <Compile Include="Data\Models\Supplier.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Category.cs" />
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\PurchaseOrderConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\SaleOrderConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\UserConfigurations.cs" />
-    <Compile Include="Data\Models\Customer.cs" />
-    <Compile Include="Data\Models\PurchaseOrder.cs" />
-    <Compile Include="Data\Models\SaleOrder.cs" />
-    <Compile Include="Data\Models\Product.cs" />
-    <Compile Include="Data\Models\Supplier.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -109,70 +146,52 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105231523212_InitializeDatabase.cs" />
-    <Compile Include="Migrations\202105231523212_InitializeDatabase.Designer.cs">
-      <DependentUpon>202105231523212_InitializeDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\202105301759511_CreateDatabaseExpert.cs" />
+    <Compile Include="Migrations\202105301759511_CreateDatabaseExpert.Designer.cs">
+      <DependentUpon>202105301759511_CreateDatabaseExpert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105231555312_AddCategoriesTable.cs" />
-    <Compile Include="Migrations\202105231555312_AddCategoriesTable.Designer.cs">
-      <DependentUpon>202105231555312_AddCategoriesTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301819259_CreateCategoriesTable.cs" />
+    <Compile Include="Migrations\202105301819259_CreateCategoriesTable.Designer.cs">
+      <DependentUpon>202105301819259_CreateCategoriesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105231631321_AddProductsTable.cs" />
-    <Compile Include="Migrations\202105231631321_AddProductsTable.Designer.cs">
-      <DependentUpon>202105231631321_AddProductsTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301824489_CreateProductsTable.cs" />
+    <Compile Include="Migrations\202105301824489_CreateProductsTable.Designer.cs">
+      <DependentUpon>202105301824489_CreateProductsTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.cs" />
-    <Compile Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.Designer.cs">
-      <DependentUpon>202105231759518_AddCategory_idColumnToProductsTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.cs" />
+    <Compile Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.Designer.cs">
+      <DependentUpon>202105301833213_AddColumnCategoryIDToProductsTAble.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105231858023_AddSuppliersTable.cs" />
-    <Compile Include="Migrations\202105231858023_AddSuppliersTable.Designer.cs">
-      <DependentUpon>202105231858023_AddSuppliersTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301837463_CreateSuppliersTable.cs" />
+    <Compile Include="Migrations\202105301837463_CreateSuppliersTable.Designer.cs">
+      <DependentUpon>202105301837463_CreateSuppliersTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.cs" />
-    <Compile Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.Designer.cs">
-      <DependentUpon>202105232016272_AddCustomerTableAndSalesOrdersTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.cs" />
+    <Compile Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.Designer.cs">
+      <DependentUpon>202105301841171_AddColumnSupplierIDToProductsTAble.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.cs" />
-    <Compile Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.Designer.cs">
-      <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
+    <Compile Include="Migrations\202105301911536_CreateCustomersTable.cs" />
+    <Compile Include="Migrations\202105301911536_CreateCustomersTable.Designer.cs">
+      <DependentUpon>202105301911536_CreateCustomersTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.cs" />
-    <Compile Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.Designer.cs">
-      <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301922497_CreateOrdersTable.cs" />
+    <Compile Include="Migrations\202105301922497_CreateOrdersTable.Designer.cs">
+      <DependentUpon>202105301922497_CreateOrdersTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs" />
-    <Compile Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.Designer.cs">
-      <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
+    <Compile Include="Migrations\202105301944287_CreateOrderProductsTable.cs" />
+    <Compile Include="Migrations\202105301944287_CreateOrderProductsTable.Designer.cs">
+      <DependentUpon>202105301944287_CreateOrderProductsTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105290038302_AddUsersTable.cs" />
-    <Compile Include="Migrations\202105290038302_AddUsersTable.Designer.cs">
-      <DependentUpon>202105290038302_AddUsersTable.cs</DependentUpon>
+    <Compile Include="Migrations\202106012318016_CreateUsersTable.cs" />
+    <Compile Include="Migrations\202106012318016_CreateUsersTable.Designer.cs">
+      <DependentUpon>202106012318016_CreateUsersTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Modules\Customers\CustomersView.cs">
+    <Compile Include="Modules\Customers\CustomersList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Customers\CustomersView.Designer.cs">
-      <DependentUpon>CustomersView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomersListView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomersListView.Designer.cs">
-      <DependentUpon>CustomersListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Sales\SalesOrderView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Sales\SalesOrderView.Designer.cs">
-      <DependentUpon>SalesOrderView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Stock\StockView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Stock\StockView.Designer.cs">
-      <DependentUpon>StockView.cs</DependentUpon>
+    <Compile Include="Modules\Customers\CustomersList.Designer.cs">
+      <DependentUpon>CustomersList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,65 +203,44 @@
     </Compile>
     <Compile Include="Services\Authenticate.cs" />
     <Compile Include="Services\CultureHandler.cs" />
-    <Compile Include="WaitForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaitForm1.Designer.cs">
-      <DependentUpon>WaitForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231523212_InitializeDatabase.resx">
-      <DependentUpon>202105231523212_InitializeDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301759511_CreateDatabaseExpert.resx">
+      <DependentUpon>202105301759511_CreateDatabaseExpert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231555312_AddCategoriesTable.resx">
-      <DependentUpon>202105231555312_AddCategoriesTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301819259_CreateCategoriesTable.resx">
+      <DependentUpon>202105301819259_CreateCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231631321_AddProductsTable.resx">
-      <DependentUpon>202105231631321_AddProductsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301824489_CreateProductsTable.resx">
+      <DependentUpon>202105301824489_CreateProductsTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231759518_AddCategory_idColumnToProductsTable.resx">
-      <DependentUpon>202105231759518_AddCategory_idColumnToProductsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.resx">
+      <DependentUpon>202105301833213_AddColumnCategoryIDToProductsTAble.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231858023_AddSuppliersTable.resx">
-      <DependentUpon>202105231858023_AddSuppliersTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301837463_CreateSuppliersTable.resx">
+      <DependentUpon>202105301837463_CreateSuppliersTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105232016272_AddCustomerTableAndSalesOrdersTable.resx">
-      <DependentUpon>202105232016272_AddCustomerTableAndSalesOrdersTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.resx">
+      <DependentUpon>202105301841171_AddColumnSupplierIDToProductsTAble.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105232021497_MakeCodeColumnInSuppliersTableUnique.resx">
-      <DependentUpon>202105232021497_MakeCodeColumnInSuppliersTableUnique.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301911536_CreateCustomersTable.resx">
+      <DependentUpon>202105301911536_CreateCustomersTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105232108398_CreateSalesOrdersDetailsTable.resx">
-      <DependentUpon>202105232108398_CreateSalesOrdersDetailsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301922497_CreateOrdersTable.resx">
+      <DependentUpon>202105301922497_CreateOrdersTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.resx">
-      <DependentUpon>202105232225076_CreatePurchasesOrdersTableAndPurchasesOrdersDetailsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301944287_CreateOrderProductsTable.resx">
+      <DependentUpon>202105301944287_CreateOrderProductsTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105290038302_AddUsersTable.resx">
-      <DependentUpon>202105290038302_AddUsersTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106012318016_CreateUsersTable.resx">
+      <DependentUpon>202106012318016_CreateUsersTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\CustomersListView.resx">
-      <DependentUpon>CustomersListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\CustomersView.resx">
-      <DependentUpon>CustomersView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Sales\SalesOrderView.resx">
-      <DependentUpon>SalesOrderView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Stock\StockView.resx">
-      <DependentUpon>StockView.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Customers\CustomersList.resx">
+      <DependentUpon>CustomersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -253,13 +251,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WaitForm1.resx">
-      <DependentUpon>WaitForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraForm1.resx">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Expert.Data.Models.Customer.datasource" />
@@ -277,8 +270,30 @@
   <ItemGroup>
     <Folder Include="Data\Services\" />
     <Folder Include="Modules\Purchases\" />
+    <Folder Include="Modules\Sales\" />
+    <Folder Include="Modules\Stock\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

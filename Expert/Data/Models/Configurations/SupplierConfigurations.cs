@@ -1,31 +1,28 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Expert.Data.Models.Configurations
 {
-    public class SupplierConfigurations : EntityTypeConfiguration<Supplier>
+    public class SupplierConfigurations: EntityTypeConfiguration<Supplier>
     {
         public SupplierConfigurations()
         {
             ToTable("Suppliers");
 
-            HasKey(s => s.Supplier_id);
+            HasKey(s => s.ID);
 
-            HasIndex(s => s.Name)
+            HasIndex(s=> s.Name)
                 .IsUnique();
-
-            HasIndex(s => s.Code)
-                .IsUnique();
-
-            Property(s => s.Code)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
-                .IsUnicode(true);
 
             Property(s => s.Name)
                 .HasColumnType("nvarchar")
                 .HasMaxLength(50)
                 .IsRequired()
-                .IsUnicode(true);
+                .IsUnicode();
 
             HasMany(s => s.Products)
                 .WithRequired(p => p.Supplier)

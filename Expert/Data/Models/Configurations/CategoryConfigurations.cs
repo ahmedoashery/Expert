@@ -1,34 +1,33 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Expert.Data.Models.Configurations
 {
-    public class CategoryConfigurations : EntityTypeConfiguration<Category>
+    public class CategoryConfigurations: EntityTypeConfiguration<Category>
     {
         public CategoryConfigurations()
         {
-            ToTable("Cateogries");
+            ToTable("Categories");
 
-            HasKey(c => c.Category_id);
+            HasKey(c => c.ID);
 
             HasIndex(c => c.Name)
                 .IsUnique();
 
             Property(c => c.Name)
-                .IsRequired()
                 .HasColumnType("nvarchar")
                 .HasMaxLength(50)
-                .IsUnicode(true);
-
-            Property(c => c.Description)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(255)
-                .IsUnicode(true);
+                .IsRequired()
+                .IsUnicode();
 
             HasMany(c => c.Products)
                 .WithRequired(p => p.Category)
                 .HasForeignKey(p => p.Category_id)
                 .WillCascadeOnDelete(false);
-
         }
     }
 }

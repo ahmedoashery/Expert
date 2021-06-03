@@ -13,12 +13,13 @@ namespace Expert.Services
 
         public bool Check(string username, string password)
         {
-            var foundUser = context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
-            if (foundUser != null)
-            {
+            var hashed = BCrypt.Net.BCrypt.HashPassword(password);
+            var foundUsername = context.Users.FirstOrDefault(u => u.Username == username);
+
+            if (foundUsername != null && BCrypt.Net.BCrypt.Verify(password, hashed))
                 return true;
-            }
-            return false;
+            else
+                return false;
         }
     }
 }

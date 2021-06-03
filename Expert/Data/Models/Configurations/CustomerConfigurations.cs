@@ -1,36 +1,34 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Expert.Data.Models.Configurations
 {
-    class CustomerConfigurations : EntityTypeConfiguration<Customer>
+    public class CustomerConfigurations: EntityTypeConfiguration<Customer>
     {
         public CustomerConfigurations()
         {
             ToTable("Customers");
 
-            HasKey(c => c.Customer_id);
+            HasKey(c => c.ID);
 
-            HasIndex(s => s.Name)
+            HasIndex(c => c.Name)
                 .IsUnique();
 
-            HasIndex(s => s.Code)
-                 .IsUnique();
-
-            Property(s => s.Code)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
-                .IsUnicode(true);
-
-            Property(s => s.Name)
+            Property(c => c.Name)
                 .HasColumnType("nvarchar")
                 .HasMaxLength(50)
                 .IsRequired()
-                .IsUnicode(true);
+                .IsUnicode();
 
             HasMany(c => c.Orders)
                 .WithRequired(o => o.Customer)
                 .HasForeignKey(o => o.Customer_id)
                 .WillCascadeOnDelete(false);
+
         }
     }
 }

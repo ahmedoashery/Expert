@@ -6,8 +6,11 @@ using DevExpress.XtraSplashScreen;
 using Expert.Properties;
 using Expert.Services;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Expert
@@ -28,7 +31,7 @@ namespace Expert
             // authenticated user
             Username.Caption = Settings.Default.AuthenticatedUser;
             // initialize documents instances
-            MainTabbedView.QueryControl += MainTabbedView_QueryControl;
+            //MainTabbedView.QueryControl += MainTabbedView_QueryControl;
         }
 
         private void SplachScreen()
@@ -53,12 +56,19 @@ namespace Expert
 
         private Control RegisterView(string name = null)
         {
-            if (name == null) return null;
-            Type type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).FirstOrDefault(x => x.Name == name); //target type
-            if (type == null) return null;
-            object obj = Activator.CreateInstance(type); // an instance of target type
-            Control view = (Control)obj;
-            view.Text = view.Name;
+            IEnumerable<Type> types = AppDomain.CurrentDomain.GetAssemblies()
+                                                             .Where(x => x.GetName().Name.StartsWith("Expert"))
+                                                             .SelectMany(x => x.GetTypes());    //target type
+            Control view = null;
+            foreach (var type in types)
+            {
+                if (type != null && name != null && type.Name == name)
+                {
+                    object obj = Activator.CreateInstance(type); // an instance of target type
+                    view = (Control)obj;
+                    view.Text = view.Name;
+                }
+            }
             return view;
         }
 
@@ -66,14 +76,14 @@ namespace Expert
         {
             var linkName = e.Link.Item.Name;
             var viewName = linkName.Substring(0, linkName.Length - 4);
-            //MainTabbedView.AddOrActivateDocument(d => d.Caption == viewName, () => RegisterView(viewName));   // withou deferred loading
+            //MainTabbedView.AddOrActivateDocument(d => d.Caption == viewName, () => RegisterView(viewName) ?? null);   // without deferred loading
 
             BaseDocument document = MainTabbedView.Documents.Exists(d => d.Caption == viewName) ?
                                             MainTabbedView.Documents.FirstOrDefault(d => d.Caption == viewName) : null;
             if (document == null)
                 document = MainTabbedView.AddDocument(viewName, null);
-
-            MainTabbedView.Controller.Activate(document);
+            else
+                MainTabbedView.Controller.Activate(document);
         }
 
         private void MainTabbedView_QueryControl(object sender, QueryControlEventArgs e)
