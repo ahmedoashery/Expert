@@ -128,70 +128,72 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ExpertContext.cs" />
-    <Compile Include="Data\Models\Configurations\OrderConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\UserConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
-    <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
-    <Compile Include="Data\Models\Customer.cs" />
-    <Compile Include="Data\Models\Order.cs" />
-    <Compile Include="Data\Models\Supplier.cs" />
-    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\Category.cs" />
     <Compile Include="Data\Models\Configurations\CategoryConfigurations.cs" />
-    <Compile Include="Data\Models\User.cs" />
+    <Compile Include="Data\Models\Configurations\CustomerConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\EmployeeConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\InventoryTransactionConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\InventoryTransactionTypeConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\InvoiceConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\MessageConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\OrderConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\OrderDetailConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\OrderDetailStatusConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\OrderStatusConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\OrderTaxStatusConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\PrivilegeConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\ProductConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\PurchaseOrderConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\PurchaseOrderDetailConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\PurchaseOrderStatusConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\SalesReportConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\ShipperConfigurations.cs" />
+    <Compile Include="Data\Models\Configurations\SupplierConfigurations.cs" />
+    <Compile Include="Data\Models\Customer.cs" />
+    <Compile Include="Data\Models\Employee.cs" />
+    <Compile Include="Data\Models\InventoryTransaction.cs" />
+    <Compile Include="Data\Models\InventoryTransactionType.cs" />
+    <Compile Include="Data\Models\Invoice.cs" />
+    <Compile Include="Data\Models\Message.cs" />
+    <Compile Include="Data\Models\Order.cs" />
+    <Compile Include="Data\Models\OrderDetail.cs" />
+    <Compile Include="Data\Models\OrderDetailStatus.cs" />
+    <Compile Include="Data\Models\OrderStatus.cs" />
+    <Compile Include="Data\Models\OrderTaxStatus.cs" />
+    <Compile Include="Data\Models\Privilege.cs" />
+    <Compile Include="Data\Models\Product.cs" />
+    <Compile Include="Data\Models\PurchaseOrder.cs" />
+    <Compile Include="Data\Models\PurchaseOrderDetail.cs" />
+    <Compile Include="Data\Models\PurchaseOrderStatus.cs" />
+    <Compile Include="Data\Models\SalesReport.cs" />
+    <Compile Include="Data\Models\Shipper.cs" />
+    <Compile Include="Data\Models\Supplier.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105301759511_CreateDatabaseExpert.cs" />
-    <Compile Include="Migrations\202105301759511_CreateDatabaseExpert.Designer.cs">
-      <DependentUpon>202105301759511_CreateDatabaseExpert.cs</DependentUpon>
+    <Compile Include="Migrations\202106040326471_CreateExpertDatabase.cs" />
+    <Compile Include="Migrations\202106040326471_CreateExpertDatabase.Designer.cs">
+      <DependentUpon>202106040326471_CreateExpertDatabase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105301819259_CreateCategoriesTable.cs" />
-    <Compile Include="Migrations\202105301819259_CreateCategoriesTable.Designer.cs">
-      <DependentUpon>202105301819259_CreateCategoriesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301824489_CreateProductsTable.cs" />
-    <Compile Include="Migrations\202105301824489_CreateProductsTable.Designer.cs">
-      <DependentUpon>202105301824489_CreateProductsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.cs" />
-    <Compile Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.Designer.cs">
-      <DependentUpon>202105301833213_AddColumnCategoryIDToProductsTAble.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301837463_CreateSuppliersTable.cs" />
-    <Compile Include="Migrations\202105301837463_CreateSuppliersTable.Designer.cs">
-      <DependentUpon>202105301837463_CreateSuppliersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.cs" />
-    <Compile Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.Designer.cs">
-      <DependentUpon>202105301841171_AddColumnSupplierIDToProductsTAble.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301911536_CreateCustomersTable.cs" />
-    <Compile Include="Migrations\202105301911536_CreateCustomersTable.Designer.cs">
-      <DependentUpon>202105301911536_CreateCustomersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301922497_CreateOrdersTable.cs" />
-    <Compile Include="Migrations\202105301922497_CreateOrdersTable.Designer.cs">
-      <DependentUpon>202105301922497_CreateOrdersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105301944287_CreateOrderProductsTable.cs" />
-    <Compile Include="Migrations\202105301944287_CreateOrderProductsTable.Designer.cs">
-      <DependentUpon>202105301944287_CreateOrderProductsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106012318016_CreateUsersTable.cs" />
-    <Compile Include="Migrations\202106012318016_CreateUsersTable.Designer.cs">
-      <DependentUpon>202106012318016_CreateUsersTable.cs</DependentUpon>
+    <Compile Include="Migrations\202106061751106_CreateTables.cs" />
+    <Compile Include="Migrations\202106061751106_CreateTables.Designer.cs">
+      <DependentUpon>202106061751106_CreateTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Modules\Customers\CustomersList.cs">
+    <Compile Include="Modules\Customers\CustomersView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Customers\CustomersList.Designer.cs">
-      <DependentUpon>CustomersList.cs</DependentUpon>
+    <Compile Include="Modules\Customers\CustomersView.Designer.cs">
+      <DependentUpon>CustomersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Stock\ProductsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Stock\ProductsView.Designer.cs">
+      <DependentUpon>ProductsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,38 +211,17 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301759511_CreateDatabaseExpert.resx">
-      <DependentUpon>202105301759511_CreateDatabaseExpert.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106040326471_CreateExpertDatabase.resx">
+      <DependentUpon>202106040326471_CreateExpertDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301819259_CreateCategoriesTable.resx">
-      <DependentUpon>202105301819259_CreateCategoriesTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106061751106_CreateTables.resx">
+      <DependentUpon>202106061751106_CreateTables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301824489_CreateProductsTable.resx">
-      <DependentUpon>202105301824489_CreateProductsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Customers\CustomersView.resx">
+      <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301833213_AddColumnCategoryIDToProductsTAble.resx">
-      <DependentUpon>202105301833213_AddColumnCategoryIDToProductsTAble.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301837463_CreateSuppliersTable.resx">
-      <DependentUpon>202105301837463_CreateSuppliersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301841171_AddColumnSupplierIDToProductsTAble.resx">
-      <DependentUpon>202105301841171_AddColumnSupplierIDToProductsTAble.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301911536_CreateCustomersTable.resx">
-      <DependentUpon>202105301911536_CreateCustomersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301922497_CreateOrdersTable.resx">
-      <DependentUpon>202105301922497_CreateOrdersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105301944287_CreateOrderProductsTable.resx">
-      <DependentUpon>202105301944287_CreateOrderProductsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106012318016_CreateUsersTable.resx">
-      <DependentUpon>202106012318016_CreateUsersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\CustomersList.resx">
-      <DependentUpon>CustomersList.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Stock\ProductsView.resx">
+      <DependentUpon>ProductsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -255,8 +236,10 @@
     </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Category.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Customer.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.SaleOrder.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -271,7 +254,6 @@
     <Folder Include="Data\Services\" />
     <Folder Include="Modules\Purchases\" />
     <Folder Include="Modules\Sales\" />
-    <Folder Include="Modules\Stock\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

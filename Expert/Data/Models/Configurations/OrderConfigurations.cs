@@ -1,31 +1,70 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace Expert.Data.Models.Configurations
 {
-    public class OrderConfigurations: EntityTypeConfiguration<Order>
+    public class OrderConfigurations : EntityTypeConfiguration<Order>
     {
         public OrderConfigurations()
         {
             ToTable("Orders");
 
-            HasKey(o => o.ID);
 
-            Property(o => o.Date)
-                .HasColumnType("Datetime");
+            Property(e => e.Ship_name)
+               .HasMaxLength(50)
+            .IsUnicode();
 
-            HasMany(o => o.Products)
-                .WithMany(p => p.Orders)
-                .Map(m => {
-                    m.ToTable("Order_Products");
-                    m.MapLeftKey("Order_id");
-                    m.MapRightKey("Product_id");
-                });
 
+            Property(e => e.Ship_address)
+                .HasMaxLength(200)
+            .IsUnicode();
+
+
+            Property(e => e.Ship_city)
+                .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Ship_state_province)
+                .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Ship_zip_postal_code)
+                .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Ship_country_region)
+                .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Payment_type)
+                .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Notes)
+                .HasMaxLength(255)
+            .IsUnicode();
+
+
+            HasMany(e => e.Inventory_transactions)
+            .WithRequired(e => e.Order)
+            .HasForeignKey(e => e.Customer_order_id)
+            .WillCascadeOnDelete(false);
+
+
+            HasMany(e => e.Invoices)
+            .WithRequired(e => e.Order)
+            .HasForeignKey(e => e.Order_id)
+            .WillCascadeOnDelete(false);
+
+
+            HasMany(e => e.Order_details)
+            .WithRequired(e => e.Order)
+            .HasForeignKey(e => e.Order_id)
+            .WillCascadeOnDelete(false);
         }
     }
 }

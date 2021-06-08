@@ -3,14 +3,13 @@ using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
+using Expert.Data;
 using Expert.Properties;
 using Expert.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace Expert
@@ -26,12 +25,26 @@ namespace Expert
 
             //Close the splashscreen
             SplashScreenManager.CloseForm();
+
+            // Date and clock in status bar
+            InitStatusBarClock();
+
             // depends on culture settings
             HandleUIByCulture();
+
             // authenticated user
             Username.Caption = Settings.Default.AuthenticatedUser;
-            // initialize documents instances
-            //MainTabbedView.QueryControl += MainTabbedView_QueryControl;
+        }
+
+        private void InitStatusBarClock()
+        {
+            Timer timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += (object sender, EventArgs e) => {
+                var currentDate = DateTime.Now;
+                CurrentDateTimeInStatusBar.Caption = currentDate.ToLongTimeString() + "      " + currentDate.ToLongDateString();
+            };
+            timer.Start();
         }
 
         private void SplachScreen()

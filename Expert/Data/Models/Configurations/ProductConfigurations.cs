@@ -1,27 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace Expert.Data.Models.Configurations
 {
-    public class ProductConfigurations: EntityTypeConfiguration<Product>
+    public class ProductConfigurations : EntityTypeConfiguration<Product>
     {
         public ProductConfigurations()
         {
             ToTable("Products");
 
-            HasKey(p => p.ID);
 
-            HasIndex(p => p.Name)
+            HasIndex(e => e.Code)
                 .IsUnique();
-            Property(p => p.Name)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
-                .IsRequired()
-                .IsUnicode();
+
+            HasIndex(e => e.Name)
+                .IsUnique();
+
+            Property(e => e.Code)
+            .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Name)
+            .HasMaxLength(50)
+            .IsUnicode();
+
+
+            Property(e => e.Description)
+            .HasMaxLength(200)
+            .IsUnicode();
+
+
+            Property(e => e.Quantity_per_unit)
+            .HasMaxLength(50)
+            .IsUnicode();
+
+
+            HasMany(e => e.Inventory_transactions)
+            .WithRequired(e => e.Product)
+            .HasForeignKey(e => e.Product_id)
+            .WillCascadeOnDelete(false);
+
+
+            HasMany(e => e.Order_details)
+            .WithRequired(e => e.Product)
+            .HasForeignKey(e => e.Product_id)
+            .WillCascadeOnDelete(false);
+
+
+            HasMany(e => e.Purchase_order_details)
+            .WithRequired(e => e.Product)
+            .HasForeignKey(e => e.Product_id)
+            .WillCascadeOnDelete(false);
         }
     }
 }

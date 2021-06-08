@@ -1,18 +1,15 @@
 namespace Expert.Data.Models
 {
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
 
-    public partial class Supplier
+    public partial class Shipper
     {
-        public Supplier()
+        public Shipper()
         {
-            Products = new ObservableCollection<Product>();
-            Purchase_orders = new ObservableCollection<PurchaseOrder>();
+            Orders = new HashSet<Order>();
         }
 
         public int ID { get; set; }
-
         public string Company { get; set; }
 
         public string First_name { get; set; }
@@ -47,7 +44,6 @@ namespace Expert.Data.Models
 
         public byte[] Attachments { get; set; }
 
-        public virtual ObservableCollection<Product> Products { get; set; }
-        public virtual ObservableCollection<PurchaseOrder> Purchase_orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
