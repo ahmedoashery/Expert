@@ -95,8 +95,8 @@ namespace Expert
                                             MainTabbedView.Documents.FirstOrDefault(d => d.Caption == viewName) : null;
             if (document == null)
                 document = MainTabbedView.AddDocument(viewName, null);
-            else
-                MainTabbedView.Controller.Activate(document);
+            
+            MainTabbedView.Controller.Activate(document);
         }
 
         private void MainTabbedView_QueryControl(object sender, QueryControlEventArgs e)

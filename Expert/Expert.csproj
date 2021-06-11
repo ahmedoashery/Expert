@@ -189,6 +189,12 @@
     <Compile Include="Modules\Customers\CustomersView.Designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Sales\OrdersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\OrdersList.Designer.cs">
+      <DependentUpon>OrdersList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Stock\ProductsView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     <EmbeddedResource Include="Modules\Customers\CustomersView.resx">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\OrdersList.resx">
+      <DependentUpon>OrdersList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Stock\ProductsView.resx">
       <DependentUpon>ProductsView.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,7 +247,11 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Expert.Data.Models.Category.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Customer.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Employee.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.OrderStatus.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.OrderTaxStatus.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.SaleOrder.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Shipper.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -253,7 +266,6 @@
   <ItemGroup>
     <Folder Include="Data\Services\" />
     <Folder Include="Modules\Purchases\" />
-    <Folder Include="Modules\Sales\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

@@ -55,6 +55,7 @@ namespace Expert
             this.LogoutButton = new DevExpress.XtraBars.BarButtonItem();
             this.UsernameLabel = new DevExpress.XtraBars.BarStaticItem();
             this.CurrentDateTimeInStatusBar = new DevExpress.XtraBars.BarStaticItem();
+            this.OrdersListLink = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.StockTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.CustoermsAndSuppliersTransactionsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -112,9 +113,10 @@ namespace Expert
             this.Username,
             this.LogoutButton,
             this.UsernameLabel,
-            this.CurrentDateTimeInStatusBar});
+            this.CurrentDateTimeInStatusBar,
+            this.OrdersListLink});
             this.MainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.MainRibbonControl.MaxItemId = 87;
+            this.MainRibbonControl.MaxItemId = 88;
             this.MainRibbonControl.Name = "MainRibbonControl";
             this.MainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
@@ -304,6 +306,14 @@ namespace Expert
             this.CurrentDateTimeInStatusBar.Id = 86;
             this.CurrentDateTimeInStatusBar.Name = "CurrentDateTimeInStatusBar";
             // 
+            // OrdersListLink
+            // 
+            this.OrdersListLink.Caption = "Sales Orders";
+            this.OrdersListLink.Id = 87;
+            this.OrdersListLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("OrdersList.ImageOptions.SvgImage")));
+            this.OrdersListLink.Name = "OrdersListLink";
+            this.OrdersListLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -339,6 +349,7 @@ namespace Expert
             // StockRibbonPageGroup
             // 
             this.StockRibbonPageGroup.ItemLinks.Add(this.ProductsViewLink);
+            this.StockRibbonPageGroup.ItemLinks.Add(this.OrdersListLink);
             this.StockRibbonPageGroup.Name = "StockRibbonPageGroup";
             this.StockRibbonPageGroup.Text = "Stock items";
             // 
@@ -508,5 +519,6 @@ namespace Expert
         private DevExpress.XtraBars.BarButtonItem LogoutButton;
         private DevExpress.XtraBars.BarStaticItem UsernameLabel;
         private DevExpress.XtraBars.BarStaticItem CurrentDateTimeInStatusBar;
+        private DevExpress.XtraBars.BarButtonItem OrdersListLink;
     }
 }
