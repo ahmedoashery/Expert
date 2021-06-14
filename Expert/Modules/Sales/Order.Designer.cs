@@ -744,6 +744,7 @@ namespace Expert.Modules.Sales
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(808, 173);
+            this.layoutControlGroup3.Text = "Main Details";
             // 
             // ItemForID
             // 
@@ -803,7 +804,7 @@ namespace Expert.Modules.Sales
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 173);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup6;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(808, 262);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup4,
@@ -825,6 +826,7 @@ namespace Expert.Modules.Sales
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Size = new System.Drawing.Size(784, 216);
+            this.layoutControlGroup4.Text = "Shipping";
             // 
             // ItemForShipped_date
             // 
@@ -918,6 +920,7 @@ namespace Expert.Modules.Sales
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
             this.layoutControlGroup5.Size = new System.Drawing.Size(784, 216);
+            this.layoutControlGroup5.Text = "Payment & Tax";
             // 
             // ItemForPayment_type
             // 
@@ -971,6 +974,7 @@ namespace Expert.Modules.Sales
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
             this.layoutControlGroup6.Size = new System.Drawing.Size(784, 216);
+            this.layoutControlGroup6.Text = "Products";
             // 
             // ItemForOrder_details
             // 
