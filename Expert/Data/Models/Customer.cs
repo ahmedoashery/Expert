@@ -1,12 +1,13 @@
 namespace Expert.Data.Models
 {
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
 
     public partial class Customer
     {
         public Customer()
         {
-            Orders = new ObservableCollection<Order>();
+            Orders = new HashSet<Order>();
         }
 
         public int ID { get; set; }
@@ -27,6 +28,6 @@ namespace Expert.Data.Models
         public string Web_page { get; set; }
         public string Notes { get; set; }
         public byte[] Attachments { get; set; }
-        public virtual ObservableCollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

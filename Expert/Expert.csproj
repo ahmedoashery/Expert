@@ -168,6 +168,7 @@
     <Compile Include="Data\Models\SalesReport.cs" />
     <Compile Include="Data\Models\Shipper.cs" />
     <Compile Include="Data\Models\Supplier.cs" />
+    <Compile Include="Data\Services\DataSources.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +189,12 @@
     </Compile>
     <Compile Include="Modules\Customers\CustomersView.Designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Sales\OrdersList.cs">
       <SubType>Form</SubType>
@@ -226,6 +233,9 @@
     <EmbeddedResource Include="Modules\Customers\CustomersView.resx">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\OrdersList.resx">
       <DependentUpon>OrdersList.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,8 +258,13 @@
     <None Include="Properties\DataSources\Expert.Data.Models.Category.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Customer.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Employee.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Order.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.OrderDetail.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.OrderDetailStatus.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.OrderStatus.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.OrderTaxStatus.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.Product.datasource" />
+    <None Include="Properties\DataSources\Expert.Data.Models.PurchaseOrder.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.SaleOrder.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Shipper.datasource" />
     <None Include="Properties\DataSources\Expert.Data.Models.Supplier.datasource" />
@@ -264,7 +279,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Services\" />
     <Folder Include="Modules\Purchases\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,7 @@
 namespace Expert.Data.Models
 {
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
 
     public partial class InventoryTransactionType
     {

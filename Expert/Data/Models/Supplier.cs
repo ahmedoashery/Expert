@@ -7,8 +7,8 @@ namespace Expert.Data.Models
     {
         public Supplier()
         {
-            Products = new ObservableCollection<Product>();
-            Purchase_orders = new ObservableCollection<PurchaseOrder>();
+            Products = new HashSet<Product>();
+            Purchase_orders = new HashSet<PurchaseOrder>();
         }
 
         public int ID { get; set; }
@@ -47,7 +47,7 @@ namespace Expert.Data.Models
 
         public byte[] Attachments { get; set; }
 
-        public virtual ObservableCollection<Product> Products { get; set; }
-        public virtual ObservableCollection<PurchaseOrder> Purchase_orders { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<PurchaseOrder> Purchase_orders { get; set; }
     }
 }

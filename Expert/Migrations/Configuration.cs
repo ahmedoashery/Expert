@@ -4,7 +4,7 @@ namespace Expert.Migrations
     using MySql.Data.EntityFramework;
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Expert.Data.ExpertContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ExpertContext>
     {
         public Configuration()
         {

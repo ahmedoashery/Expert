@@ -7,9 +7,9 @@ namespace Expert.Data.Models
     {
         public Product()
         {
-            Inventory_transactions = new ObservableCollection<InventoryTransaction>();
-            Order_details = new ObservableCollection<OrderDetail>();
-            Purchase_order_details = new ObservableCollection<PurchaseOrderDetail>();
+            Inventory_transactions = new HashSet<InventoryTransaction>();
+            Order_details = new HashSet<OrderDetail>();
+            Purchase_order_details = new HashSet<PurchaseOrderDetail>();
         }
 
         public int ID { get; set; }
@@ -44,10 +44,10 @@ namespace Expert.Data.Models
 
         public byte[] Attachments { get; set; }
 
-        public virtual ObservableCollection<InventoryTransaction> Inventory_transactions { get; set; }
+        public virtual ICollection<InventoryTransaction> Inventory_transactions { get; set; }
 
-        public virtual ObservableCollection<OrderDetail> Order_details { get; set; }
+        public virtual ICollection<OrderDetail> Order_details { get; set; }
 
-        public virtual ObservableCollection<PurchaseOrderDetail> Purchase_order_details { get; set; }
+        public virtual ICollection<PurchaseOrderDetail> Purchase_order_details { get; set; }
     }
 }
