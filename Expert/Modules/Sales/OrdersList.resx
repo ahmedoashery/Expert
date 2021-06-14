@@ -143,7 +143,7 @@
     <value>Combo</value>
   </data>
   <metadata name="employeeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 17</value>
+    <value>170, 17</value>
   </metadata>
   <data name="colID1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -168,6 +168,12 @@
   </data>
   <data name="colLast_name.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="colAttachments2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colAttachments2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="colEmployee_id.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -668,6 +674,12 @@
   <data name="&gt;&gt;colLast_name.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;colAttachments2.Name" xml:space="preserve">
+    <value>colAttachments2</value>
+  </data>
+  <data name="&gt;&gt;colAttachments2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;colCustomer_id.Name" xml:space="preserve">
     <value>colCustomer_id</value>
   </data>
@@ -932,6 +944,12 @@
   <data name="&gt;&gt;colStatus_name.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;colOrder_details.Name" xml:space="preserve">
+    <value>colOrder_details</value>
+  </data>
+  <data name="&gt;&gt;colOrder_details.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bbiPrintPreview.Name" xml:space="preserve">
     <value>bbiPrintPreview</value>
   </data>
@@ -1134,12 +1152,6 @@
     <value>colInventory_id</value>
   </data>
   <data name="&gt;&gt;colInventory_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colOrder_details.Name" xml:space="preserve">
-    <value>colOrder_details</value>
-  </data>
-  <data name="&gt;&gt;colOrder_details.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

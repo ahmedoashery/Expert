@@ -56,24 +56,35 @@ namespace Expert.Modules.Sales
             this.Order_detailsGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.NotesTextEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Customer_idTextEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompany1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirst_name1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLast_name1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAttachments1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Status_idTextEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.orderStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Shipper_idTextEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.shipperBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Tax_status_idTextEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.orderTaxStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForID = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForEmployee_id = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForCustomer_id = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForOrder_date = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForStatus_id = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForNotes = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForOrder_date = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForCustomer_id = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForShipped_date = new DevExpress.XtraLayout.LayoutControlItem();
@@ -93,13 +104,20 @@ namespace Expert.Modules.Sales
             this.ItemForTax_status_id = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForOrder_details = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Employee_idTextEdit = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Employee_idTextEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompany = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirst_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLast_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAttachments = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCompany2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirst_name2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLast_name2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAttachments2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTax_status_name = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -124,24 +142,28 @@ namespace Expert.Modules.Sales
             ((System.ComponentModel.ISupportInitialize)(this.Order_detailsGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotesTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Customer_idTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Status_idTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Shipper_idTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipperBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tax_status_idTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTaxStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmployee_id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCustomer_id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_date)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_date)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCustomer_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForShipped_date)).BeginInit();
@@ -162,7 +184,7 @@ namespace Expert.Modules.Sales
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_details)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_idTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -208,7 +230,7 @@ namespace Expert.Modules.Sales
             this.SetBoundPropertyName(this.barDockControlBottom, "");
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 582);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 484);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(828, 0);
             // 
@@ -219,7 +241,7 @@ namespace Expert.Modules.Sales
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 553);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 455);
             // 
             // barDockControlRight
             // 
@@ -228,7 +250,7 @@ namespace Expert.Modules.Sales
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(828, 29);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 553);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 455);
             // 
             // dataLayoutControl1
             // 
@@ -259,7 +281,7 @@ namespace Expert.Modules.Sales
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 29);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(828, 553);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(828, 455);
             this.dataLayoutControl1.TabIndex = 4;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -275,7 +297,7 @@ namespace Expert.Modules.Sales
             this.IDTextEdit.Properties.Mask.EditMask = "N0";
             this.IDTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.IDTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.IDTextEdit.Size = new System.Drawing.Size(673, 20);
+            this.IDTextEdit.Size = new System.Drawing.Size(281, 20);
             this.IDTextEdit.StyleController = this.dataLayoutControl1;
             this.IDTextEdit.TabIndex = 4;
             // 
@@ -288,14 +310,14 @@ namespace Expert.Modules.Sales
             this.SetBoundPropertyName(this.Order_dateDateEdit, "");
             this.Order_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Order_date", true));
             this.Order_dateDateEdit.EditValue = null;
-            this.Order_dateDateEdit.Location = new System.Drawing.Point(131, 114);
+            this.Order_dateDateEdit.Location = new System.Drawing.Point(523, 42);
             this.Order_dateDateEdit.MenuManager = this.barManager1;
             this.Order_dateDateEdit.Name = "Order_dateDateEdit";
             this.Order_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Order_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Order_dateDateEdit.Size = new System.Drawing.Size(673, 20);
+            this.Order_dateDateEdit.Size = new System.Drawing.Size(281, 20);
             this.Order_dateDateEdit.StyleController = this.dataLayoutControl1;
             this.Order_dateDateEdit.TabIndex = 7;
             // 
@@ -304,7 +326,7 @@ namespace Expert.Modules.Sales
             this.SetBoundPropertyName(this.Shipped_dateDateEdit, "");
             this.Shipped_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Shipped_date", true));
             this.Shipped_dateDateEdit.EditValue = null;
-            this.Shipped_dateDateEdit.Location = new System.Drawing.Point(131, 317);
+            this.Shipped_dateDateEdit.Location = new System.Drawing.Point(131, 219);
             this.Shipped_dateDateEdit.MenuManager = this.barManager1;
             this.Shipped_dateDateEdit.Name = "Shipped_dateDateEdit";
             this.Shipped_dateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -320,7 +342,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_nameTextEdit, "");
             this.Ship_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_name", true));
-            this.Ship_nameTextEdit.Location = new System.Drawing.Point(131, 365);
+            this.Ship_nameTextEdit.Location = new System.Drawing.Point(131, 267);
             this.Ship_nameTextEdit.MenuManager = this.barManager1;
             this.Ship_nameTextEdit.Name = "Ship_nameTextEdit";
             this.Ship_nameTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -331,7 +353,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_addressTextEdit, "");
             this.Ship_addressTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_address", true));
-            this.Ship_addressTextEdit.Location = new System.Drawing.Point(131, 389);
+            this.Ship_addressTextEdit.Location = new System.Drawing.Point(131, 291);
             this.Ship_addressTextEdit.MenuManager = this.barManager1;
             this.Ship_addressTextEdit.Name = "Ship_addressTextEdit";
             this.Ship_addressTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -342,7 +364,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_cityTextEdit, "");
             this.Ship_cityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_city", true));
-            this.Ship_cityTextEdit.Location = new System.Drawing.Point(131, 413);
+            this.Ship_cityTextEdit.Location = new System.Drawing.Point(131, 315);
             this.Ship_cityTextEdit.MenuManager = this.barManager1;
             this.Ship_cityTextEdit.Name = "Ship_cityTextEdit";
             this.Ship_cityTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -353,7 +375,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_state_provinceTextEdit, "");
             this.Ship_state_provinceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_state_province", true));
-            this.Ship_state_provinceTextEdit.Location = new System.Drawing.Point(131, 437);
+            this.Ship_state_provinceTextEdit.Location = new System.Drawing.Point(131, 339);
             this.Ship_state_provinceTextEdit.MenuManager = this.barManager1;
             this.Ship_state_provinceTextEdit.Name = "Ship_state_provinceTextEdit";
             this.Ship_state_provinceTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -364,7 +386,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_zip_postal_codeTextEdit, "");
             this.Ship_zip_postal_codeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_zip_postal_code", true));
-            this.Ship_zip_postal_codeTextEdit.Location = new System.Drawing.Point(131, 461);
+            this.Ship_zip_postal_codeTextEdit.Location = new System.Drawing.Point(131, 363);
             this.Ship_zip_postal_codeTextEdit.MenuManager = this.barManager1;
             this.Ship_zip_postal_codeTextEdit.Name = "Ship_zip_postal_codeTextEdit";
             this.Ship_zip_postal_codeTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -375,7 +397,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Ship_country_regionTextEdit, "");
             this.Ship_country_regionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Ship_country_region", true));
-            this.Ship_country_regionTextEdit.Location = new System.Drawing.Point(131, 485);
+            this.Ship_country_regionTextEdit.Location = new System.Drawing.Point(131, 387);
             this.Ship_country_regionTextEdit.MenuManager = this.barManager1;
             this.Ship_country_regionTextEdit.Name = "Ship_country_regionTextEdit";
             this.Ship_country_regionTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -386,7 +408,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Shipping_feeTextEdit, "");
             this.Shipping_feeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Shipping_fee", true));
-            this.Shipping_feeTextEdit.Location = new System.Drawing.Point(131, 509);
+            this.Shipping_feeTextEdit.Location = new System.Drawing.Point(131, 411);
             this.Shipping_feeTextEdit.MenuManager = this.barManager1;
             this.Shipping_feeTextEdit.Name = "Shipping_feeTextEdit";
             this.Shipping_feeTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -403,7 +425,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.TaxesTextEdit, "");
             this.TaxesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Taxes", true));
-            this.TaxesTextEdit.Location = new System.Drawing.Point(131, 365);
+            this.TaxesTextEdit.Location = new System.Drawing.Point(131, 267);
             this.TaxesTextEdit.MenuManager = this.barManager1;
             this.TaxesTextEdit.Name = "TaxesTextEdit";
             this.TaxesTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -420,7 +442,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Payment_typeTextEdit, "");
             this.Payment_typeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Payment_type", true));
-            this.Payment_typeTextEdit.Location = new System.Drawing.Point(131, 317);
+            this.Payment_typeTextEdit.Location = new System.Drawing.Point(131, 219);
             this.Payment_typeTextEdit.MenuManager = this.barManager1;
             this.Payment_typeTextEdit.Name = "Payment_typeTextEdit";
             this.Payment_typeTextEdit.Size = new System.Drawing.Size(673, 20);
@@ -432,7 +454,7 @@ namespace Expert.Modules.Sales
             this.SetBoundPropertyName(this.Paid_dateDateEdit, "");
             this.Paid_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Paid_date", true));
             this.Paid_dateDateEdit.EditValue = null;
-            this.Paid_dateDateEdit.Location = new System.Drawing.Point(131, 341);
+            this.Paid_dateDateEdit.Location = new System.Drawing.Point(131, 243);
             this.Paid_dateDateEdit.MenuManager = this.barManager1;
             this.Paid_dateDateEdit.Name = "Paid_dateDateEdit";
             this.Paid_dateDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -448,7 +470,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Tax_rateTextEdit, "");
             this.Tax_rateTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Tax_rate", true));
-            this.Tax_rateTextEdit.Location = new System.Drawing.Point(131, 389);
+            this.Tax_rateTextEdit.Location = new System.Drawing.Point(131, 291);
             this.Tax_rateTextEdit.MenuManager = this.barManager1;
             this.Tax_rateTextEdit.Name = "Tax_rateTextEdit";
             this.Tax_rateTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -465,7 +487,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Order_detailsGridControl, "");
             this.Order_detailsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.OrderBindingSource, "Order_details", true));
-            this.Order_detailsGridControl.Location = new System.Drawing.Point(24, 317);
+            this.Order_detailsGridControl.Location = new System.Drawing.Point(24, 219);
             this.Order_detailsGridControl.MainView = this.gridView1;
             this.Order_detailsGridControl.MenuManager = this.barManager1;
             this.Order_detailsGridControl.Name = "Order_detailsGridControl";
@@ -483,22 +505,18 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.NotesTextEdit, "");
             this.NotesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Notes", true));
-            this.NotesTextEdit.Location = new System.Drawing.Point(131, 162);
+            this.NotesTextEdit.Location = new System.Drawing.Point(131, 114);
             this.NotesTextEdit.MenuManager = this.barManager1;
             this.NotesTextEdit.Name = "NotesTextEdit";
-            this.NotesTextEdit.Size = new System.Drawing.Size(673, 105);
+            this.NotesTextEdit.Size = new System.Drawing.Size(673, 55);
             this.NotesTextEdit.StyleController = this.dataLayoutControl1;
             this.NotesTextEdit.TabIndex = 20;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(Expert.Data.Models.Employee);
             // 
             // Customer_idTextEdit
             // 
             this.SetBoundPropertyName(this.Customer_idTextEdit, "");
             this.Customer_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Customer_id", true));
-            this.Customer_idTextEdit.Location = new System.Drawing.Point(131, 90);
+            this.Customer_idTextEdit.Location = new System.Drawing.Point(131, 66);
             this.Customer_idTextEdit.MenuManager = this.barManager1;
             this.Customer_idTextEdit.Name = "Customer_idTextEdit";
             this.Customer_idTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -506,24 +524,72 @@ namespace Expert.Modules.Sales
             this.Customer_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.Customer_idTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Customer_idTextEdit.Properties.DataSource = this.customerBindingSource;
+            this.Customer_idTextEdit.Properties.DisplayMember = "First_name";
             this.Customer_idTextEdit.Properties.NullText = "";
             this.Customer_idTextEdit.Properties.PopupView = this.gridView2;
-            this.Customer_idTextEdit.Size = new System.Drawing.Size(673, 20);
+            this.Customer_idTextEdit.Properties.ValueMember = "ID";
+            this.Customer_idTextEdit.Size = new System.Drawing.Size(281, 20);
             this.Customer_idTextEdit.StyleController = this.dataLayoutControl1;
             this.Customer_idTextEdit.TabIndex = 6;
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(Expert.Data.Models.Customer);
+            // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID1,
+            this.colCompany1,
+            this.colFirst_name1,
+            this.colLast_name1,
+            this.colAttachments1});
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
+            // colID1
+            // 
+            this.colID1.FieldName = "ID";
+            this.colID1.Name = "colID1";
+            this.colID1.Visible = true;
+            this.colID1.VisibleIndex = 0;
+            // 
+            // colCompany1
+            // 
+            this.colCompany1.FieldName = "Company";
+            this.colCompany1.Name = "colCompany1";
+            this.colCompany1.Visible = true;
+            this.colCompany1.VisibleIndex = 1;
+            // 
+            // colFirst_name1
+            // 
+            this.colFirst_name1.FieldName = "First_name";
+            this.colFirst_name1.Name = "colFirst_name1";
+            this.colFirst_name1.Visible = true;
+            this.colFirst_name1.VisibleIndex = 2;
+            // 
+            // colLast_name1
+            // 
+            this.colLast_name1.FieldName = "Last_name";
+            this.colLast_name1.Name = "colLast_name1";
+            this.colLast_name1.Visible = true;
+            this.colLast_name1.VisibleIndex = 3;
+            // 
+            // colAttachments1
+            // 
+            this.colAttachments1.FieldName = "Attachments";
+            this.colAttachments1.Name = "colAttachments1";
+            this.colAttachments1.Visible = true;
+            this.colAttachments1.VisibleIndex = 4;
+            // 
             // Status_idTextEdit
             // 
             this.SetBoundPropertyName(this.Status_idTextEdit, "");
             this.Status_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Status_id", true));
-            this.Status_idTextEdit.Location = new System.Drawing.Point(131, 138);
+            this.Status_idTextEdit.Location = new System.Drawing.Point(131, 90);
             this.Status_idTextEdit.MenuManager = this.barManager1;
             this.Status_idTextEdit.Name = "Status_idTextEdit";
             this.Status_idTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -531,24 +597,48 @@ namespace Expert.Modules.Sales
             this.Status_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.Status_idTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Status_idTextEdit.Properties.DataSource = this.orderStatusBindingSource;
+            this.Status_idTextEdit.Properties.DisplayMember = "Status_name";
             this.Status_idTextEdit.Properties.NullText = "";
             this.Status_idTextEdit.Properties.PopupView = this.gridView3;
+            this.Status_idTextEdit.Properties.ValueMember = "ID";
             this.Status_idTextEdit.Size = new System.Drawing.Size(673, 20);
             this.Status_idTextEdit.StyleController = this.dataLayoutControl1;
             this.Status_idTextEdit.TabIndex = 23;
             // 
+            // orderStatusBindingSource
+            // 
+            this.orderStatusBindingSource.DataSource = typeof(Expert.Data.Models.OrderStatus);
+            // 
             // gridView3
             // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID2,
+            this.colStatus_name});
             this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
+            // colID2
+            // 
+            this.colID2.FieldName = "ID";
+            this.colID2.Name = "colID2";
+            this.colID2.Visible = true;
+            this.colID2.VisibleIndex = 0;
+            // 
+            // colStatus_name
+            // 
+            this.colStatus_name.FieldName = "Status_name";
+            this.colStatus_name.Name = "colStatus_name";
+            this.colStatus_name.Visible = true;
+            this.colStatus_name.VisibleIndex = 1;
+            // 
             // Shipper_idTextEdit
             // 
             this.SetBoundPropertyName(this.Shipper_idTextEdit, "");
             this.Shipper_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Shipper_id", true));
-            this.Shipper_idTextEdit.Location = new System.Drawing.Point(131, 341);
+            this.Shipper_idTextEdit.Location = new System.Drawing.Point(131, 243);
             this.Shipper_idTextEdit.MenuManager = this.barManager1;
             this.Shipper_idTextEdit.Name = "Shipper_idTextEdit";
             this.Shipper_idTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -556,14 +646,27 @@ namespace Expert.Modules.Sales
             this.Shipper_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.Shipper_idTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Shipper_idTextEdit.Properties.DataSource = this.shipperBindingSource;
+            this.Shipper_idTextEdit.Properties.DisplayMember = "First_name";
             this.Shipper_idTextEdit.Properties.NullText = "";
             this.Shipper_idTextEdit.Properties.PopupView = this.gridView4;
+            this.Shipper_idTextEdit.Properties.ValueMember = "ID";
             this.Shipper_idTextEdit.Size = new System.Drawing.Size(673, 20);
             this.Shipper_idTextEdit.StyleController = this.dataLayoutControl1;
             this.Shipper_idTextEdit.TabIndex = 9;
             // 
+            // shipperBindingSource
+            // 
+            this.shipperBindingSource.DataSource = typeof(Expert.Data.Models.Shipper);
+            // 
             // gridView4
             // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID3,
+            this.colCompany2,
+            this.colFirst_name2,
+            this.colLast_name2,
+            this.colAttachments2});
             this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -573,7 +676,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Tax_status_idTextEdit, "");
             this.Tax_status_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Tax_status_id", true));
-            this.Tax_status_idTextEdit.Location = new System.Drawing.Point(131, 413);
+            this.Tax_status_idTextEdit.Location = new System.Drawing.Point(131, 315);
             this.Tax_status_idTextEdit.MenuManager = this.barManager1;
             this.Tax_status_idTextEdit.Name = "Tax_status_idTextEdit";
             this.Tax_status_idTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -581,18 +684,32 @@ namespace Expert.Modules.Sales
             this.Tax_status_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.Tax_status_idTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Tax_status_idTextEdit.Properties.DataSource = this.orderTaxStatusBindingSource;
+            this.Tax_status_idTextEdit.Properties.DisplayMember = "Tax_status_name";
             this.Tax_status_idTextEdit.Properties.NullText = "";
             this.Tax_status_idTextEdit.Properties.PopupView = this.gridView5;
+            this.Tax_status_idTextEdit.Properties.ValueMember = "ID";
             this.Tax_status_idTextEdit.Size = new System.Drawing.Size(673, 20);
             this.Tax_status_idTextEdit.StyleController = this.dataLayoutControl1;
             this.Tax_status_idTextEdit.TabIndex = 22;
             // 
+            // orderTaxStatusBindingSource
+            // 
+            this.orderTaxStatusBindingSource.DataSource = typeof(Expert.Data.Models.OrderTaxStatus);
+            // 
             // gridView5
             // 
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID4,
+            this.colTax_status_name});
             this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(Expert.Data.Models.Employee);
             // 
             // layoutControlGroup1
             // 
@@ -601,7 +718,7 @@ namespace Expert.Modules.Sales
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(828, 553);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(828, 455);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -613,61 +730,43 @@ namespace Expert.Modules.Sales
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(808, 533);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(808, 435);
             // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForID,
             this.ItemForEmployee_id,
-            this.ItemForCustomer_id,
-            this.ItemForOrder_date,
             this.ItemForStatus_id,
-            this.ItemForNotes});
+            this.ItemForNotes,
+            this.ItemForOrder_date,
+            this.ItemForCustomer_id});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(808, 271);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(808, 173);
             // 
             // ItemForID
             // 
             this.ItemForID.Control = this.IDTextEdit;
             this.ItemForID.Location = new System.Drawing.Point(0, 0);
             this.ItemForID.Name = "ItemForID";
-            this.ItemForID.Size = new System.Drawing.Size(784, 24);
+            this.ItemForID.Size = new System.Drawing.Size(392, 24);
             this.ItemForID.Text = "ID";
             this.ItemForID.TextSize = new System.Drawing.Size(103, 13);
             // 
             // ItemForEmployee_id
             // 
             this.ItemForEmployee_id.Control = this.Employee_idTextEdit;
-            this.ItemForEmployee_id.Location = new System.Drawing.Point(0, 24);
+            this.ItemForEmployee_id.Location = new System.Drawing.Point(392, 24);
             this.ItemForEmployee_id.Name = "ItemForEmployee_id";
-            this.ItemForEmployee_id.Size = new System.Drawing.Size(784, 24);
+            this.ItemForEmployee_id.Size = new System.Drawing.Size(392, 24);
             this.ItemForEmployee_id.Text = "Employee_id";
             this.ItemForEmployee_id.TextSize = new System.Drawing.Size(103, 13);
-            // 
-            // ItemForCustomer_id
-            // 
-            this.ItemForCustomer_id.Control = this.Customer_idTextEdit;
-            this.ItemForCustomer_id.Location = new System.Drawing.Point(0, 48);
-            this.ItemForCustomer_id.Name = "ItemForCustomer_id";
-            this.ItemForCustomer_id.Size = new System.Drawing.Size(784, 24);
-            this.ItemForCustomer_id.Text = "Customer_id";
-            this.ItemForCustomer_id.TextSize = new System.Drawing.Size(103, 13);
-            // 
-            // ItemForOrder_date
-            // 
-            this.ItemForOrder_date.Control = this.Order_dateDateEdit;
-            this.ItemForOrder_date.Location = new System.Drawing.Point(0, 72);
-            this.ItemForOrder_date.Name = "ItemForOrder_date";
-            this.ItemForOrder_date.Size = new System.Drawing.Size(784, 24);
-            this.ItemForOrder_date.Text = "Order_date";
-            this.ItemForOrder_date.TextSize = new System.Drawing.Size(103, 13);
             // 
             // ItemForStatus_id
             // 
             this.ItemForStatus_id.Control = this.Status_idTextEdit;
-            this.ItemForStatus_id.Location = new System.Drawing.Point(0, 96);
+            this.ItemForStatus_id.Location = new System.Drawing.Point(0, 48);
             this.ItemForStatus_id.Name = "ItemForStatus_id";
             this.ItemForStatus_id.Size = new System.Drawing.Size(784, 24);
             this.ItemForStatus_id.Text = "Status_id";
@@ -676,17 +775,35 @@ namespace Expert.Modules.Sales
             // ItemForNotes
             // 
             this.ItemForNotes.Control = this.NotesTextEdit;
-            this.ItemForNotes.Location = new System.Drawing.Point(0, 120);
+            this.ItemForNotes.Location = new System.Drawing.Point(0, 72);
             this.ItemForNotes.Name = "ItemForNotes";
-            this.ItemForNotes.Size = new System.Drawing.Size(784, 109);
+            this.ItemForNotes.Size = new System.Drawing.Size(784, 59);
             this.ItemForNotes.Text = "Notes";
             this.ItemForNotes.TextSize = new System.Drawing.Size(103, 13);
             // 
+            // ItemForOrder_date
+            // 
+            this.ItemForOrder_date.Control = this.Order_dateDateEdit;
+            this.ItemForOrder_date.Location = new System.Drawing.Point(392, 0);
+            this.ItemForOrder_date.Name = "ItemForOrder_date";
+            this.ItemForOrder_date.Size = new System.Drawing.Size(392, 24);
+            this.ItemForOrder_date.Text = "Order_date";
+            this.ItemForOrder_date.TextSize = new System.Drawing.Size(103, 13);
+            // 
+            // ItemForCustomer_id
+            // 
+            this.ItemForCustomer_id.Control = this.Customer_idTextEdit;
+            this.ItemForCustomer_id.Location = new System.Drawing.Point(0, 24);
+            this.ItemForCustomer_id.Name = "ItemForCustomer_id";
+            this.ItemForCustomer_id.Size = new System.Drawing.Size(392, 24);
+            this.ItemForCustomer_id.Text = "Customer_id";
+            this.ItemForCustomer_id.TextSize = new System.Drawing.Size(103, 13);
+            // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 271);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 173);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup6;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(808, 262);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup4,
@@ -870,7 +987,7 @@ namespace Expert.Modules.Sales
             // 
             this.SetBoundPropertyName(this.Employee_idTextEdit, "");
             this.Employee_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.OrderBindingSource, "Employee_id", true));
-            this.Employee_idTextEdit.Location = new System.Drawing.Point(131, 66);
+            this.Employee_idTextEdit.Location = new System.Drawing.Point(523, 66);
             this.Employee_idTextEdit.MenuManager = this.barManager1;
             this.Employee_idTextEdit.Name = "Employee_idTextEdit";
             this.Employee_idTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -881,59 +998,108 @@ namespace Expert.Modules.Sales
             this.Employee_idTextEdit.Properties.DataSource = this.employeeBindingSource;
             this.Employee_idTextEdit.Properties.DisplayMember = "First_name";
             this.Employee_idTextEdit.Properties.NullText = "";
-            this.Employee_idTextEdit.Properties.PopupView = this.gridLookUpEdit1View;
+            this.Employee_idTextEdit.Properties.PopupView = this.searchLookUpEdit1View;
             this.Employee_idTextEdit.Properties.ValueMember = "ID";
-            this.Employee_idTextEdit.Size = new System.Drawing.Size(673, 20);
+            this.Employee_idTextEdit.Size = new System.Drawing.Size(281, 20);
             this.Employee_idTextEdit.StyleController = this.dataLayoutControl1;
             this.Employee_idTextEdit.TabIndex = 5;
             // 
-            // gridLookUpEdit1View
+            // searchLookUpEdit1View
             // 
-            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID,
+            this.colCompany,
+            this.colFirst_name,
+            this.colLast_name,
+            this.colAttachments});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // colID
             // 
-            this.gridColumn1.FieldName = "ID";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // colCompany
             // 
-            this.gridColumn2.FieldName = "Company";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colCompany.FieldName = "Company";
+            this.colCompany.Name = "colCompany";
+            this.colCompany.Visible = true;
+            this.colCompany.VisibleIndex = 1;
             // 
-            // gridColumn3
+            // colFirst_name
             // 
-            this.gridColumn3.FieldName = "First_name";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.colFirst_name.FieldName = "First_name";
+            this.colFirst_name.Name = "colFirst_name";
+            this.colFirst_name.Visible = true;
+            this.colFirst_name.VisibleIndex = 2;
             // 
-            // gridColumn4
+            // colLast_name
             // 
-            this.gridColumn4.FieldName = "Last_name";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.colLast_name.FieldName = "Last_name";
+            this.colLast_name.Name = "colLast_name";
+            this.colLast_name.Visible = true;
+            this.colLast_name.VisibleIndex = 3;
             // 
-            // gridColumn5
+            // colAttachments
             // 
-            this.gridColumn5.FieldName = "Attachments";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.colAttachments.FieldName = "Attachments";
+            this.colAttachments.Name = "colAttachments";
+            this.colAttachments.Visible = true;
+            this.colAttachments.VisibleIndex = 4;
+            // 
+            // colID3
+            // 
+            this.colID3.FieldName = "ID";
+            this.colID3.Name = "colID3";
+            this.colID3.Visible = true;
+            this.colID3.VisibleIndex = 0;
+            // 
+            // colCompany2
+            // 
+            this.colCompany2.FieldName = "Company";
+            this.colCompany2.Name = "colCompany2";
+            this.colCompany2.Visible = true;
+            this.colCompany2.VisibleIndex = 1;
+            // 
+            // colFirst_name2
+            // 
+            this.colFirst_name2.FieldName = "First_name";
+            this.colFirst_name2.Name = "colFirst_name2";
+            this.colFirst_name2.Visible = true;
+            this.colFirst_name2.VisibleIndex = 2;
+            // 
+            // colLast_name2
+            // 
+            this.colLast_name2.FieldName = "Last_name";
+            this.colLast_name2.Name = "colLast_name2";
+            this.colLast_name2.Visible = true;
+            this.colLast_name2.VisibleIndex = 3;
+            // 
+            // colAttachments2
+            // 
+            this.colAttachments2.FieldName = "Attachments";
+            this.colAttachments2.Name = "colAttachments2";
+            this.colAttachments2.Visible = true;
+            this.colAttachments2.VisibleIndex = 4;
+            // 
+            // colID4
+            // 
+            this.colID4.FieldName = "ID";
+            this.colID4.Name = "colID4";
+            this.colID4.Visible = true;
+            this.colID4.VisibleIndex = 0;
+            // 
+            // colTax_status_name
+            // 
+            this.colTax_status_name.FieldName = "Tax_status_name";
+            this.colTax_status_name.Name = "colTax_status_name";
+            this.colTax_status_name.Visible = true;
+            this.colTax_status_name.VisibleIndex = 1;
             // 
             // Order
             // 
@@ -945,7 +1111,7 @@ namespace Expert.Modules.Sales
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Order";
-            this.Size = new System.Drawing.Size(828, 582);
+            this.Size = new System.Drawing.Size(828, 484);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
@@ -970,24 +1136,28 @@ namespace Expert.Modules.Sales
             ((System.ComponentModel.ISupportInitialize)(this.Order_detailsGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotesTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Customer_idTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Status_idTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Shipper_idTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipperBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tax_status_idTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTaxStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmployee_id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCustomer_id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_date)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_date)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCustomer_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForShipped_date)).EndInit();
@@ -1008,7 +1178,7 @@ namespace Expert.Modules.Sales
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForOrder_details)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Employee_idTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1078,13 +1248,31 @@ namespace Expert.Modules.Sales
         private DevExpress.XtraEditors.SearchLookUpEdit Tax_status_idTextEdit;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompany1;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirst_name1;
+        private DevExpress.XtraGrid.Columns.GridColumn colLast_name1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAttachments1;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private DevExpress.XtraEditors.GridLookUpEdit Employee_idTextEdit;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private System.Windows.Forms.BindingSource orderStatusBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID2;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus_name;
+        private System.Windows.Forms.BindingSource shipperBindingSource;
+        private System.Windows.Forms.BindingSource orderTaxStatusBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID3;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompany2;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirst_name2;
+        private DevExpress.XtraGrid.Columns.GridColumn colLast_name2;
+        private DevExpress.XtraGrid.Columns.GridColumn colAttachments2;
+        private DevExpress.XtraGrid.Columns.GridColumn colID4;
+        private DevExpress.XtraGrid.Columns.GridColumn colTax_status_name;
+        private DevExpress.XtraEditors.SearchLookUpEdit Employee_idTextEdit;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompany;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirst_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colLast_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colAttachments;
     }
 }

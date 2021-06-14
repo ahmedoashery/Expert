@@ -43,6 +43,7 @@ namespace Expert.Modules.Sales
             this.colCompany = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirst_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLast_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAttachments2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomer_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CustomersGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,6 +88,7 @@ namespace Expert.Modules.Sales
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrder_details = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
@@ -122,7 +124,6 @@ namespace Expert.Modules.Sales
             this.purchaseOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colInventory_id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrder_details = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersListGridView)).BeginInit();
@@ -246,7 +247,8 @@ namespace Expert.Modules.Sales
             this.colID1,
             this.colCompany,
             this.colFirst_name,
-            this.colLast_name});
+            this.colLast_name,
+            this.colAttachments2});
             this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -275,6 +277,12 @@ namespace Expert.Modules.Sales
             this.colLast_name.FieldName = "Last_name";
             this.colLast_name.Name = "colLast_name";
             resources.ApplyResources(this.colLast_name, "colLast_name");
+            // 
+            // colAttachments2
+            // 
+            this.colAttachments2.FieldName = "Attachments";
+            this.colAttachments2.Name = "colAttachments2";
+            resources.ApplyResources(this.colAttachments2, "colAttachments2");
             // 
             // colCustomer_id
             // 
@@ -578,6 +586,11 @@ namespace Expert.Modules.Sales
             this.colStatus_name.Name = "colStatus_name";
             resources.ApplyResources(this.colStatus_name, "colStatus_name");
             // 
+            // colOrder_details
+            // 
+            this.colOrder_details.FieldName = "Order_details";
+            this.colOrder_details.Name = "colOrder_details";
+            // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
@@ -868,11 +881,6 @@ namespace Expert.Modules.Sales
             this.colInventory_id.Name = "colInventory_id";
             resources.ApplyResources(this.colInventory_id, "colInventory_id");
             // 
-            // colOrder_details
-            // 
-            this.colOrder_details.FieldName = "Order_details";
-            this.colOrder_details.Name = "colOrder_details";
-            // 
             // OrdersList
             // 
             resources.ApplyResources(this, "$this");
@@ -933,7 +941,6 @@ namespace Expert.Modules.Sales
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit EmployeesGridLookUpEdit;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit CustomersGridLookUpEdit1;
         private System.Windows.Forms.BindingSource customerBindingSource;
@@ -947,10 +954,6 @@ namespace Expert.Modules.Sales
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit OrderStatusesGridLookUpEdit;
         private System.Windows.Forms.BindingSource orderStatusBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Columns.GridColumn colID1;
-        private DevExpress.XtraGrid.Columns.GridColumn colCompany;
-        private DevExpress.XtraGrid.Columns.GridColumn colFirst_name;
-        private DevExpress.XtraGrid.Columns.GridColumn colLast_name;
         private DevExpress.XtraGrid.Columns.GridColumn colID2;
         private DevExpress.XtraGrid.Columns.GridColumn colCompany1;
         private DevExpress.XtraGrid.Columns.GridColumn colFirst_name1;
@@ -1012,5 +1015,11 @@ namespace Expert.Modules.Sales
         private DevExpress.XtraGrid.Columns.GridColumn colTax_status_id;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus_id;
         private DevExpress.XtraGrid.Columns.GridColumn colOrder_details;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCompany;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirst_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colLast_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colAttachments2;
     }
 }
