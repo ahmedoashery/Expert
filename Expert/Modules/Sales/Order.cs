@@ -20,17 +20,24 @@ namespace Expert.Modules.Sales
             InitializeComponent();
 
             OrderBindingSource.DataSource = DataSources.OrdersBindingList();
+            employeeBindingSource.DataSource = DataSources.EmployeesBindingList();
+            customerBindingSource.DataSource = DataSources.CustomersBindingList();
+            orderStatusBindingSource.DataSource = DataSources.Orders_statusBindingList();
+            shipperBindingSource.DataSource = DataSources.ShippersBindingList();
+            orderTaxStatusBindingSource.DataSource = DataSources.Orders_tax_statusBindingList();
+            productBindingSource.DataSource = DataSources.ProductsBindingList();
+            orderDetailStatusBindingSource.DataSource = DataSources.Order_details_statusBindingList();
+            categoryBindingSource.DataSource = DataSources.CategoriesBindingList();
+            supplierBindingSource.DataSource = DataSources.SuppliersBindingList();
 
             SetBoundFieldName(IDTextEdit, "ID");
             SetBoundPropertyName(IDTextEdit, "EditValue");
 
-            employeeBindingSource.DataSource = DataSources.EmployeesBindingList();
             SetBoundFieldName(Employee_idTextEdit, "Employee_id");
             SetBoundPropertyName(Employee_idTextEdit, "EditValue");
             Employee_idTextEdit.Properties.DisplayMember = "First_name";
             Employee_idTextEdit.Properties.ValueMember = "ID";
 
-            customerBindingSource.DataSource = DataSources.CustomersBindingList();
             SetBoundFieldName(Customer_idTextEdit, "Customer_id");
             SetBoundPropertyName(Customer_idTextEdit, "EditValue");
             Customer_idTextEdit.Properties.DisplayMember = "First_name";
@@ -39,7 +46,6 @@ namespace Expert.Modules.Sales
             SetBoundFieldName(Order_dateDateEdit, "Order_date");
             SetBoundPropertyName(Order_dateDateEdit, "EditValue");
 
-            orderStatusBindingSource.DataSource = DataSources.Orders_statusBindingList();
             SetBoundFieldName(Status_idTextEdit, "Status_id");
             SetBoundPropertyName(Status_idTextEdit, "EditValue");
             Status_idTextEdit.Properties.DisplayMember = "Status_name" ;
@@ -51,7 +57,6 @@ namespace Expert.Modules.Sales
             SetBoundFieldName(Shipped_dateDateEdit, "Shipped_date");
             SetBoundPropertyName(Shipped_dateDateEdit, "EditValue");
 
-            shipperBindingSource.DataSource = DataSources.ShippersBindingList();
             SetBoundFieldName(Shipper_idTextEdit, "Shipper_id");
             SetBoundPropertyName(Shipper_idTextEdit, "EditValue");
             Shipper_idTextEdit.Properties.DisplayMember = "First_name";
@@ -90,7 +95,6 @@ namespace Expert.Modules.Sales
             SetBoundFieldName(Tax_rateTextEdit, "Tax_rate");
             SetBoundPropertyName(Tax_rateTextEdit, "EditValue");
 
-            orderTaxStatusBindingSource.DataSource = DataSources.Orders_tax_statusBindingList();
             SetBoundFieldName(Tax_status_idTextEdit, "Tax_status_id");
             SetBoundPropertyName(Tax_status_idTextEdit, "EditValue");
             Tax_status_idTextEdit.Properties.DisplayMember = "Tax_status_name";
