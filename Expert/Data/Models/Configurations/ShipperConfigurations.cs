@@ -89,7 +89,7 @@ namespace Expert.Data.Models.Configurations
             .IsUnicode();
 
 
-            HasMany(e => e.Orders)
+            HasMany(e => e.Sale_orders)
             .WithRequired(e => e.Shipper)
             .HasForeignKey(e => e.Shipper_id)
             .WillCascadeOnDelete(false);

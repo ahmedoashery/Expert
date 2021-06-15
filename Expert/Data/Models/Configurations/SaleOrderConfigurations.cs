@@ -2,11 +2,11 @@
 
 namespace Expert.Data.Models.Configurations
 {
-    public class OrderConfigurations : EntityTypeConfiguration<Order>
+    public class SaleOrderConfigurations : EntityTypeConfiguration<SaleOrder>
     {
-        public OrderConfigurations()
+        public SaleOrderConfigurations()
         {
-            ToTable("Orders");
+            ToTable("Sale_Orders");
 
 
             Property(e => e.Ship_name)
@@ -47,19 +47,6 @@ namespace Expert.Data.Models.Configurations
             Property(e => e.Notes)
                 .HasMaxLength(255)
             .IsUnicode();
-
-
-            HasMany(e => e.Inventory_transactions)
-            .WithRequired(e => e.Order)
-            .HasForeignKey(e => e.Customer_order_id)
-            .WillCascadeOnDelete(false);
-
-
-            HasMany(e => e.Invoices)
-            .WithRequired(e => e.Order)
-            .HasForeignKey(e => e.Order_id)
-            .WillCascadeOnDelete(false);
-
 
             HasMany(e => e.Order_details)
             .WithRequired(e => e.Order)

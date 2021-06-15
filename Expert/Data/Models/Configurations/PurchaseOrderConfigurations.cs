@@ -16,14 +16,9 @@ namespace Expert.Data.Models.Configurations
                 .HasMaxLength(255)
                 .IsUnicode();
 
-            HasMany(e => e.Inventory_transactions)
-                .WithRequired(e => e.Purchase_orders)
-                .HasForeignKey(e => e.Purchase_order_id)
-                .WillCascadeOnDelete(false);
-
             HasMany(e => e.Purchase_order_details)
                 .WithRequired(e => e.Purchase_orders)
-                .HasForeignKey(e => e.Purchase_order_id)
+                .HasForeignKey(e => e.Order_id)
                 .WillCascadeOnDelete(false);
         }
     }

@@ -7,13 +7,13 @@ namespace Expert.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CreateExpertDatabase : IMigrationMetadata
+    public sealed partial class CreateDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateExpertDatabase));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106040326471_CreateExpertDatabase"; }
+            get { return "202106162149545_CreateDatabase"; }
         }
         
         string IMigrationMetadata.Source

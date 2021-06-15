@@ -1,7 +1,7 @@
 ﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using Expert.Services;
+using Expert.Core;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

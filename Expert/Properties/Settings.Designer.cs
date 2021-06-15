@@ -70,5 +70,17 @@ namespace Expert.Properties {
                 this["AuthenticatedUser"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("No")]
+        public global::System.Windows.Forms.RightToLeft RightToLeft {
+            get {
+                return ((global::System.Windows.Forms.RightToLeft)(this["RightToLeft"]));
+            }
+            set {
+                this["RightToLeft"] = value;
+            }
+        }
     }
 }

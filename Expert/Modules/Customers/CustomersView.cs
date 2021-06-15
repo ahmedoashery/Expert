@@ -8,6 +8,9 @@ namespace Expert.Modules.Customers
         public CustomersView()
         {
             InitializeComponent();
+
+            RightToLeft = Properties.Settings.Default.RightToLeft;
+
             GetData();
         }
 

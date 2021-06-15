@@ -7,7 +7,7 @@ namespace Expert.Data.Models
     {
         public Employee()
         {
-            Orders = new HashSet<Order>();
+            Sale_orders = new HashSet<SaleOrder>();
             Purchase_orders = new HashSet<PurchaseOrder>();
             Privileges = new HashSet<Privilege>();
         }
@@ -30,7 +30,7 @@ namespace Expert.Data.Models
         public string Web_page { get; set; }
         public string Notes { get; set; }
         public byte[] Attachments { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<SaleOrder> Sale_orders { get; set; }
         public virtual ICollection<PurchaseOrder> Purchase_orders { get; set; }
         public virtual ICollection<Privilege> Privileges { get; set; }
     }

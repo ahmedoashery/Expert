@@ -5,7 +5,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using Expert.Data;
 using Expert.Properties;
-using Expert.Services;
+using Expert.Core;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -67,24 +67,6 @@ namespace Expert
             );
         }
 
-        private Control RegisterView(string name = null)
-        {
-            IEnumerable<Type> types = AppDomain.CurrentDomain.GetAssemblies()
-                                                             .Where(x => x.GetName().Name.StartsWith("Expert"))
-                                                             .SelectMany(x => x.GetTypes());    //target type
-            Control view = null;
-            foreach (var type in types)
-            {
-                if (type != null && name != null && type.Name == name)
-                {
-                    object obj = Activator.CreateInstance(type); // an instance of target type
-                    view = (Control)obj;
-                    view.Text = view.Name;
-                }
-            }
-            return view;
-        }
-
         private void BarItemNavigation_Click(object sender, ItemClickEventArgs e)
         {
             var linkName = e.Link.Item.Name;
@@ -101,7 +83,7 @@ namespace Expert
 
         private void MainTabbedView_QueryControl(object sender, QueryControlEventArgs e)
         {
-            Control control = RegisterView(e.Document.Caption);
+            Control control = ViewLoader.RegisterView(e.Document.Caption);
             e.Control = control;
             if (e.Control == null)
                 e.Control = new Control();
@@ -125,11 +107,15 @@ namespace Expert
             var lang = Settings.Default.Language;
             if (lang == "AR")
             {
-                RightToLeft = RightToLeft.Yes;
+                Settings.Default.RightToLeft = RightToLeft.Yes;
                 btnArabicLang.Enabled = false;
                 UsernameLabel.Caption = "مستخدم : ";
             }
-            if (lang == "EN") btnEnglishLang.Enabled = false;
+            if (lang == "EN")
+            {
+                btnEnglishLang.Enabled = false;
+                Settings.Default.RightToLeft = RightToLeft.No;
+            }
         }
 
         private void Logoutbutton_ItemClick(object sender, ItemClickEventArgs e)

@@ -43,9 +43,9 @@ namespace Expert.Data.Models
 
         public string Web_page { get; set; }
 
-        public string Notes { get; set; }
-
         public byte[] Attachments { get; set; }
+
+        public string Notes { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<PurchaseOrder> Purchase_orders { get; set; }

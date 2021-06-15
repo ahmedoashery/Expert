@@ -135,6 +135,15 @@
   <data name="colID.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="colCreation_date.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colCreation_date.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colCreation_date.Width" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
   <data name="EmployeesGridLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -179,7 +188,10 @@
     <value>True</value>
   </data>
   <data name="colEmployee_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="colEmployee_id.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="CustomersGridLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -224,19 +236,19 @@
     <value>True</value>
   </data>
   <data name="colCustomer_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <data name="colOrder_date.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colOrder_date.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="colCustomer_id.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="colShipped_date.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShipped_date.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="colShipped_date.Width" type="System.Int32, mscorlib">
+    <value>86</value>
   </data>
   <data name="ShippersGridLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -281,106 +293,55 @@
     <value>True</value>
   </data>
   <data name="colShipper_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="colShip_name.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_name.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="colShip_address.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_address.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="colShip_address.Width" type="System.Int32, mscorlib">
+    <value>84</value>
   </data>
   <data name="colShip_city.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_city.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="colShip_state_province.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_state_province.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
+  </data>
+  <data name="colShip_state_province.Width" type="System.Int32, mscorlib">
+    <value>118</value>
   </data>
   <data name="colShip_zip_postal_code.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_zip_postal_code.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="colShip_zip_postal_code.Width" type="System.Int32, mscorlib">
+    <value>123</value>
   </data>
   <data name="colShip_country_region.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colShip_country_region.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="colShipping_fee.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colShipping_fee.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="colTaxes.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colTaxes.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="colPayment_type.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colPayment_type.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="colPaid_date.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colPaid_date.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="colNotes.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colNotes.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="colTax_rate.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colTax_rate.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="TaxStatusesGridLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TaxStatusesGridLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="orderTaxStatusBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <data name="colID4.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colID4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="colTax_status_name.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colTax_status_name.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="colTax_status_id.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colTax_status_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="colShip_country_region.Width" type="System.Int32, mscorlib">
+    <value>119</value>
   </data>
   <data name="OrderStatusesGridLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -407,7 +368,43 @@
     <value>True</value>
   </data>
   <data name="colStatus_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>1</value>
+  </data>
+  <data name="colShipping_fee.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colShipping_fee.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="colShipping_fee.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="colDiscount1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDiscount1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="colPayment_type.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colPayment_type.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="colPayment_type.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="colPaid_date.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colPaid_date.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="colNotes.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNotes.VisibleIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="bbiPrintPreview.Caption" xml:space="preserve">
     <value>Print Preview</value>
@@ -476,108 +473,6 @@
   <data name="&gt;&gt;ribbonControl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="OrderDetailsGridLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="OrderDetailsGridLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="orderDetailBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 56</value>
-  </metadata>
-  <data name="colID6.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colID6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="OrdersSearchLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="OrdersSearchLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <data name="colOrder_id.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colOrder_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ProductsSearchLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ProductsSearchLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>614, 56</value>
-  </metadata>
-  <data name="colProduct_id.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colProduct_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="colQuantity.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colQuantity.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="colUnit_price.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colUnit_price.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="colDiscount.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colDiscount.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="OrderDetailsStatusSearchLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="OrderDetailsStatusSearchLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="orderDetailStatusBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <data name="colStatus_id1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colStatus_id1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="colDate_allocated.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colDate_allocated.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PurchaseOrdersSearchLookUpEdit.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PurchaseOrdersSearchLookUpEdit.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <metadata name="purchaseOrderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>242, 95</value>
-  </metadata>
-  <data name="colPurchase_order_id.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colPurchase_order_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="colInventory_id.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colInventory_id.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="gridControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>790, 479</value>
   </data>
@@ -596,6 +491,21 @@
   <data name="&gt;&gt;gridControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="orderTaxStatusBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="orderDetailBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>422, 56</value>
+  </metadata>
+  <metadata name="productBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>614, 56</value>
+  </metadata>
+  <metadata name="orderDetailStatusBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="purchaseOrderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>242, 95</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -619,18 +529,6 @@
   </data>
   <data name="&gt;&gt;OrdersListGridView.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colID.Name" xml:space="preserve">
-    <value>colID</value>
-  </data>
-  <data name="&gt;&gt;colID.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colEmployee_id.Name" xml:space="preserve">
-    <value>colEmployee_id</value>
-  </data>
-  <data name="&gt;&gt;colEmployee_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;EmployeesGridLookUpEdit.Name" xml:space="preserve">
     <value>EmployeesGridLookUpEdit</value>
@@ -678,12 +576,6 @@
     <value>colAttachments2</value>
   </data>
   <data name="&gt;&gt;colAttachments2.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colCustomer_id.Name" xml:space="preserve">
-    <value>colCustomer_id</value>
-  </data>
-  <data name="&gt;&gt;colCustomer_id.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;CustomersGridLookUpEdit1.Name" xml:space="preserve">
@@ -734,24 +626,6 @@
   <data name="&gt;&gt;colAttachments.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colOrder_date.Name" xml:space="preserve">
-    <value>colOrder_date</value>
-  </data>
-  <data name="&gt;&gt;colOrder_date.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShipped_date.Name" xml:space="preserve">
-    <value>colShipped_date</value>
-  </data>
-  <data name="&gt;&gt;colShipped_date.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShipper_id.Name" xml:space="preserve">
-    <value>colShipper_id</value>
-  </data>
-  <data name="&gt;&gt;colShipper_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;ShippersGridLookUpEdit.Name" xml:space="preserve">
     <value>ShippersGridLookUpEdit</value>
   </data>
@@ -800,119 +674,11 @@
   <data name="&gt;&gt;colAttachments1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colShip_name.Name" xml:space="preserve">
-    <value>colShip_name</value>
-  </data>
-  <data name="&gt;&gt;colShip_name.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShip_address.Name" xml:space="preserve">
-    <value>colShip_address</value>
-  </data>
-  <data name="&gt;&gt;colShip_address.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShip_city.Name" xml:space="preserve">
-    <value>colShip_city</value>
-  </data>
-  <data name="&gt;&gt;colShip_city.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShip_state_province.Name" xml:space="preserve">
-    <value>colShip_state_province</value>
-  </data>
-  <data name="&gt;&gt;colShip_state_province.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShip_zip_postal_code.Name" xml:space="preserve">
-    <value>colShip_zip_postal_code</value>
-  </data>
-  <data name="&gt;&gt;colShip_zip_postal_code.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShip_country_region.Name" xml:space="preserve">
-    <value>colShip_country_region</value>
-  </data>
-  <data name="&gt;&gt;colShip_country_region.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colShipping_fee.Name" xml:space="preserve">
-    <value>colShipping_fee</value>
-  </data>
-  <data name="&gt;&gt;colShipping_fee.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colTaxes.Name" xml:space="preserve">
-    <value>colTaxes</value>
-  </data>
-  <data name="&gt;&gt;colTaxes.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colPayment_type.Name" xml:space="preserve">
-    <value>colPayment_type</value>
-  </data>
-  <data name="&gt;&gt;colPayment_type.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colPaid_date.Name" xml:space="preserve">
-    <value>colPaid_date</value>
-  </data>
-  <data name="&gt;&gt;colPaid_date.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colNotes.Name" xml:space="preserve">
-    <value>colNotes</value>
-  </data>
-  <data name="&gt;&gt;colNotes.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colTax_rate.Name" xml:space="preserve">
-    <value>colTax_rate</value>
-  </data>
-  <data name="&gt;&gt;colTax_rate.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colTax_status_id.Name" xml:space="preserve">
-    <value>colTax_status_id</value>
-  </data>
-  <data name="&gt;&gt;colTax_status_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;TaxStatusesGridLookUpEdit.Name" xml:space="preserve">
-    <value>TaxStatusesGridLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;TaxStatusesGridLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;orderTaxStatusBindingSource.Name" xml:space="preserve">
     <value>orderTaxStatusBindingSource</value>
   </data>
   <data name="&gt;&gt;orderTaxStatusBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridView3.Name" xml:space="preserve">
-    <value>gridView3</value>
-  </data>
-  <data name="&gt;&gt;gridView3.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colID4.Name" xml:space="preserve">
-    <value>colID4</value>
-  </data>
-  <data name="&gt;&gt;colID4.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colTax_status_name.Name" xml:space="preserve">
-    <value>colTax_status_name</value>
-  </data>
-  <data name="&gt;&gt;colTax_status_name.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colStatus_id.Name" xml:space="preserve">
-    <value>colStatus_id</value>
-  </data>
-  <data name="&gt;&gt;colStatus_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;OrderStatusesGridLookUpEdit.Name" xml:space="preserve">
     <value>OrderStatusesGridLookUpEdit</value>
@@ -942,12 +708,6 @@
     <value>colStatus_name</value>
   </data>
   <data name="&gt;&gt;colStatus_name.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colOrder_details.Name" xml:space="preserve">
-    <value>colOrder_details</value>
-  </data>
-  <data name="&gt;&gt;colOrder_details.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bbiPrintPreview.Name" xml:space="preserve">
@@ -1010,59 +770,11 @@
   <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;OrderDetailsGridLookUpEdit.Name" xml:space="preserve">
-    <value>OrderDetailsGridLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;OrderDetailsGridLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;orderDetailBindingSource.Name" xml:space="preserve">
     <value>orderDetailBindingSource</value>
   </data>
   <data name="&gt;&gt;orderDetailBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridView5.Name" xml:space="preserve">
-    <value>gridView5</value>
-  </data>
-  <data name="&gt;&gt;gridView5.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colID6.Name" xml:space="preserve">
-    <value>colID6</value>
-  </data>
-  <data name="&gt;&gt;colID6.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colOrder_id.Name" xml:space="preserve">
-    <value>colOrder_id</value>
-  </data>
-  <data name="&gt;&gt;colOrder_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;OrdersSearchLookUpEdit.Name" xml:space="preserve">
-    <value>OrdersSearchLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;OrdersSearchLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Name" xml:space="preserve">
-    <value>repositoryItemSearchLookUpEdit1View</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colProduct_id.Name" xml:space="preserve">
-    <value>colProduct_id</value>
-  </data>
-  <data name="&gt;&gt;colProduct_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ProductsSearchLookUpEdit.Name" xml:space="preserve">
-    <value>ProductsSearchLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;ProductsSearchLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;productBindingSource.Name" xml:space="preserve">
     <value>productBindingSource</value>
@@ -1070,71 +782,11 @@
   <data name="&gt;&gt;productBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gridView6.Name" xml:space="preserve">
-    <value>gridView6</value>
-  </data>
-  <data name="&gt;&gt;gridView6.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colQuantity.Name" xml:space="preserve">
-    <value>colQuantity</value>
-  </data>
-  <data name="&gt;&gt;colQuantity.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colUnit_price.Name" xml:space="preserve">
-    <value>colUnit_price</value>
-  </data>
-  <data name="&gt;&gt;colUnit_price.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colDiscount.Name" xml:space="preserve">
-    <value>colDiscount</value>
-  </data>
-  <data name="&gt;&gt;colDiscount.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colStatus_id1.Name" xml:space="preserve">
-    <value>colStatus_id1</value>
-  </data>
-  <data name="&gt;&gt;colStatus_id1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;OrderDetailsStatusSearchLookUpEdit.Name" xml:space="preserve">
-    <value>OrderDetailsStatusSearchLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;OrderDetailsStatusSearchLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;orderDetailStatusBindingSource.Name" xml:space="preserve">
     <value>orderDetailStatusBindingSource</value>
   </data>
   <data name="&gt;&gt;orderDetailStatusBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridView7.Name" xml:space="preserve">
-    <value>gridView7</value>
-  </data>
-  <data name="&gt;&gt;gridView7.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colDate_allocated.Name" xml:space="preserve">
-    <value>colDate_allocated</value>
-  </data>
-  <data name="&gt;&gt;colDate_allocated.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colPurchase_order_id.Name" xml:space="preserve">
-    <value>colPurchase_order_id</value>
-  </data>
-  <data name="&gt;&gt;colPurchase_order_id.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;PurchaseOrdersSearchLookUpEdit.Name" xml:space="preserve">
-    <value>PurchaseOrdersSearchLookUpEdit</value>
-  </data>
-  <data name="&gt;&gt;PurchaseOrdersSearchLookUpEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;purchaseOrderBindingSource.Name" xml:space="preserve">
     <value>purchaseOrderBindingSource</value>
@@ -1142,16 +794,118 @@
   <data name="&gt;&gt;purchaseOrderBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gridView8.Name" xml:space="preserve">
-    <value>gridView8</value>
+  <data name="&gt;&gt;colID.Name" xml:space="preserve">
+    <value>colID</value>
   </data>
-  <data name="&gt;&gt;gridView8.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;colID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colInventory_id.Name" xml:space="preserve">
-    <value>colInventory_id</value>
+  <data name="&gt;&gt;colStatus_id.Name" xml:space="preserve">
+    <value>colStatus_id</value>
   </data>
-  <data name="&gt;&gt;colInventory_id.Type" xml:space="preserve">
+  <data name="&gt;&gt;colStatus_id.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colCreation_date.Name" xml:space="preserve">
+    <value>colCreation_date</value>
+  </data>
+  <data name="&gt;&gt;colCreation_date.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colEmployee_id.Name" xml:space="preserve">
+    <value>colEmployee_id</value>
+  </data>
+  <data name="&gt;&gt;colEmployee_id.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colCustomer_id.Name" xml:space="preserve">
+    <value>colCustomer_id</value>
+  </data>
+  <data name="&gt;&gt;colCustomer_id.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShipped_date.Name" xml:space="preserve">
+    <value>colShipped_date</value>
+  </data>
+  <data name="&gt;&gt;colShipped_date.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShipper_id.Name" xml:space="preserve">
+    <value>colShipper_id</value>
+  </data>
+  <data name="&gt;&gt;colShipper_id.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_name.Name" xml:space="preserve">
+    <value>colShip_name</value>
+  </data>
+  <data name="&gt;&gt;colShip_name.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_address.Name" xml:space="preserve">
+    <value>colShip_address</value>
+  </data>
+  <data name="&gt;&gt;colShip_address.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_city.Name" xml:space="preserve">
+    <value>colShip_city</value>
+  </data>
+  <data name="&gt;&gt;colShip_city.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_state_province.Name" xml:space="preserve">
+    <value>colShip_state_province</value>
+  </data>
+  <data name="&gt;&gt;colShip_state_province.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_zip_postal_code.Name" xml:space="preserve">
+    <value>colShip_zip_postal_code</value>
+  </data>
+  <data name="&gt;&gt;colShip_zip_postal_code.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShip_country_region.Name" xml:space="preserve">
+    <value>colShip_country_region</value>
+  </data>
+  <data name="&gt;&gt;colShip_country_region.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colShipping_fee.Name" xml:space="preserve">
+    <value>colShipping_fee</value>
+  </data>
+  <data name="&gt;&gt;colShipping_fee.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colDiscount1.Name" xml:space="preserve">
+    <value>colDiscount1</value>
+  </data>
+  <data name="&gt;&gt;colDiscount1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colPayment_type.Name" xml:space="preserve">
+    <value>colPayment_type</value>
+  </data>
+  <data name="&gt;&gt;colPayment_type.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colPaid_date.Name" xml:space="preserve">
+    <value>colPaid_date</value>
+  </data>
+  <data name="&gt;&gt;colPaid_date.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colNotes.Name" xml:space="preserve">
+    <value>colNotes</value>
+  </data>
+  <data name="&gt;&gt;colNotes.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colOrder_details.Name" xml:space="preserve">
+    <value>colOrder_details</value>
+  </data>
+  <data name="&gt;&gt;colOrder_details.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

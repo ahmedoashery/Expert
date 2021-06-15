@@ -13,6 +13,7 @@ namespace Expert.Modules.Sales
         public OrdersList()
         {
             InitializeComponent();
+            RightToLeft = Properties.Settings.Default.RightToLeft;
 
             ordersBindingSource.DataSource = DataSources.OrdersBindingList();
 
@@ -22,13 +23,9 @@ namespace Expert.Modules.Sales
 
             shipperBindingSource.DataSource = DataSources.ShippersBindingList();
 
-            orderTaxStatusBindingSource.DataSource = DataSources.Orders_tax_statusBindingList();
-
             orderStatusBindingSource.DataSource = DataSources.Orders_statusBindingList();
 
             orderDetailBindingSource.DataSource = DataSources.OrderDetailsBindingList();
-
-            orderDetailStatusBindingSource.DataSource = DataSources.Order_details_statusBindingList();
 
             productBindingSource.DataSource = DataSources.ProductsBindingList();
 

@@ -8,7 +8,7 @@ namespace Expert.Data.Models.Configurations
         {
             ToTable("Purchase_Order_Statuses");
 
-            Property(e => e.Status)
+            Property(e => e.Status_name)
                 .HasMaxLength(50)
                 .IsUnicode();
 

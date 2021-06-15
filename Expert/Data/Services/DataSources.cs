@@ -1,5 +1,4 @@
 ﻿using Expert.Data.Models;
-using System;
 using System.ComponentModel;
 using System.Data.Entity;
 
@@ -10,11 +9,11 @@ namespace Expert.Data.Services
         // Instantiate a new DBContext
         public static ExpertContext dbContext = new ExpertContext();
 
-        public static BindingList<Order> OrdersBindingList()
+        public static BindingList<SaleOrder> OrdersBindingList()
         {
-            dbContext.Orders.LoadAsync();
+            dbContext.SaleOrders.LoadAsync();
             // Bind data to control when loading complete
-            return dbContext.Orders.Local.ToBindingList();
+            return dbContext.SaleOrders.Local.ToBindingList();
         }
 
         public static BindingList<Employee> EmployeesBindingList()
@@ -32,10 +31,10 @@ namespace Expert.Data.Services
             return dbContext.Customers.Local.ToBindingList();
         }
 
-        public static BindingList<OrderDetail> OrderDetailsBindingList()
+        public static BindingList<SaleOrderDetail> OrderDetailsBindingList()
         {
-            dbContext.Order_details.LoadAsync();
-            return dbContext.Order_details.Local.ToBindingList();
+            dbContext.Sale_order_details.LoadAsync();
+            return dbContext.Sale_order_details.Local.ToBindingList();
         }
 
         public static BindingList<Shipper> ShippersBindingList()
@@ -45,25 +44,11 @@ namespace Expert.Data.Services
             return dbContext.Shippers.Local.ToBindingList();
         }
 
-        public static BindingList<OrderTaxStatus> Orders_tax_statusBindingList()
+        public static BindingList<SaleOrderStatus> Orders_statusBindingList()
         {
-            dbContext.Orders_tax_status.LoadAsync();
+            dbContext.Sale_orders_status.LoadAsync();
             // Bind data to control when loading complete
-            return dbContext.Orders_tax_status.Local.ToBindingList();
-        }
-
-        public static BindingList<OrderStatus> Orders_statusBindingList()
-        {
-            dbContext.Orders_status.LoadAsync();
-            // Bind data to control when loading complete
-            return dbContext.Orders_status.Local.ToBindingList();
-        }
-
-        public static BindingList<OrderDetailStatus> Order_details_statusBindingList()
-        {
-            dbContext.Order_details_status.LoadAsync();
-            // Bind data to control when loading complete
-            return dbContext.Order_details_status.Local.ToBindingList();
+            return dbContext.Sale_orders_status.Local.ToBindingList();
         }
 
         public static BindingList<Product> ProductsBindingList()
@@ -78,6 +63,20 @@ namespace Expert.Data.Services
             dbContext.Purchase_orders.LoadAsync();
             // Bind data to control when loading complete
             return dbContext.Purchase_orders.Local.ToBindingList();
+        }
+
+        public static BindingList<Category> CategoriesBindingList()
+        {
+            dbContext.Categories.LoadAsync();
+            // Bind data to control when loading complete
+            return dbContext.Categories.Local.ToBindingList();
+        }
+
+        public static BindingList<Supplier> SuppliersBindingList()
+        {
+            dbContext.Suppliers.LoadAsync();
+            // Bind data to control when loading complete
+            return dbContext.Suppliers.Local.ToBindingList();
         }
 
 

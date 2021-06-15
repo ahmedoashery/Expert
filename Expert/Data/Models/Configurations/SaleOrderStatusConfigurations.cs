@@ -2,19 +2,18 @@
 
 namespace Expert.Data.Models.Configurations
 {
-    public class OrderDetailStatusConfigurations : EntityTypeConfiguration<OrderDetailStatus>
+    public class SaleOrderStatusConfigurations : EntityTypeConfiguration<SaleOrderStatus>
     {
-        public OrderDetailStatusConfigurations()
+        public SaleOrderStatusConfigurations()
         {
-            ToTable("Order_Detail_Statuses");
+            ToTable("Sale_Order_Statuses");
 
             Property(e => e.Status_name)
                 .HasMaxLength(50)
                 .IsUnicode();
 
-
-            HasMany(e => e.Order_details)
-                .WithRequired(e => e.Order_details_status)
+            HasMany(e => e.Orders)
+                .WithRequired(e => e.Order_status)
                 .HasForeignKey(e => e.Status_id)
                 .WillCascadeOnDelete(false);
         }

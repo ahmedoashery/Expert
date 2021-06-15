@@ -1,6 +1,6 @@
 ﻿using Expert.Data;
 
-namespace Expert.Services
+namespace Expert.Core
 {
     public class Authenticate
     {

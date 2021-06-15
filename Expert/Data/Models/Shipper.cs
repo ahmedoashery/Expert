@@ -7,7 +7,7 @@ namespace Expert.Data.Models
     {
         public Shipper()
         {
-            Orders = new HashSet<Order>();
+            Sale_orders = new HashSet<SaleOrder>();
         }
 
         public int ID { get; set; }
@@ -41,10 +41,10 @@ namespace Expert.Data.Models
 
         public string Web_page { get; set; }
 
-        public string Notes { get; set; }
-
         public byte[] Attachments { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public string Notes { get; set; }
+
+        public virtual ICollection<SaleOrder> Sale_orders { get; set; }
     }
 }

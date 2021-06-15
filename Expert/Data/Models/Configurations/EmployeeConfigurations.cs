@@ -88,7 +88,7 @@ namespace Expert.Data.Models.Configurations
             .IsUnicode();
 
 
-            HasMany(e => e.Orders)
+            HasMany(e => e.Sale_orders)
                 .WithRequired(e => e.Employee)
                 .HasForeignKey(e => e.Employee_id)
                 .WillCascadeOnDelete(false);
@@ -96,7 +96,7 @@ namespace Expert.Data.Models.Configurations
 
             HasMany(e => e.Purchase_orders)
             .WithRequired(e => e.Employee)
-            .HasForeignKey(e => e.Created_by)
+            .HasForeignKey(e => e.Employee_id)
             .WillCascadeOnDelete(false);
 
 

@@ -14,5 +14,8 @@
     <Setting Name="AuthenticatedUser" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="RightToLeft" Type="System.Windows.Forms.RightToLeft" Scope="User">
+      <Value Profile="(Default)">No</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

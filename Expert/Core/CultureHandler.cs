@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Expert.Services
+namespace Expert.Core
 {
     public class CultureHandler
     {

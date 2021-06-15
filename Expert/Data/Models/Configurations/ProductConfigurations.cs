@@ -29,19 +29,7 @@ namespace Expert.Data.Models.Configurations
             .HasMaxLength(200)
             .IsUnicode();
 
-
-            Property(e => e.Quantity_per_unit)
-            .HasMaxLength(50)
-            .IsUnicode();
-
-
-            HasMany(e => e.Inventory_transactions)
-            .WithRequired(e => e.Product)
-            .HasForeignKey(e => e.Product_id)
-            .WillCascadeOnDelete(false);
-
-
-            HasMany(e => e.Order_details)
+            HasMany(e => e.Sale_order_details)
             .WithRequired(e => e.Product)
             .HasForeignKey(e => e.Product_id)
             .WillCascadeOnDelete(false);

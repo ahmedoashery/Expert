@@ -12,7 +12,7 @@ namespace Expert.Data.Models
 
         public int ID { get; set; }
 
-        public string Status { get; set; }
+        public string Status_name { get; set; }
 
         public virtual ICollection<PurchaseOrder> Purchase_orders { get; set; }
     }
