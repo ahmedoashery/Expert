@@ -79,20 +79,5 @@ namespace Expert.Data.Services
             return dbContext.Suppliers.Local.ToBindingList();
         }
 
-        public static BindingList<Category> CategoriesBindingList()
-        {
-            dbContext.Categories.LoadAsync();
-            // Bind data to control when loading complete
-            return dbContext.Categories.Local.ToBindingList();
-        }
-
-        public static BindingList<Supplier> SuppliersBindingList()
-        {
-            dbContext.Suppliers.LoadAsync();
-            // Bind data to control when loading complete
-            return dbContext.Suppliers.Local.ToBindingList();
-        }
-
-
     }
 }

@@ -19,12 +19,9 @@ namespace Expert
         public Main()
         {
             // Show a splashscreen.
-            SplachScreen();
+            SplashScreenManager.ShowForm(typeof(StartupSplashScreen));
 
             InitializeComponent();
-
-            //Close the splashscreen
-            SplashScreenManager.CloseForm();
 
             // Date and clock in status bar
             InitStatusBarClock();
@@ -34,6 +31,9 @@ namespace Expert
 
             // authenticated user
             Username.Caption = Settings.Default.AuthenticatedUser;
+
+            //Close the splashscreen
+            SplashScreenManager.CloseForm();
         }
 
         private void InitStatusBarClock()
@@ -45,26 +45,6 @@ namespace Expert
                 CurrentDateTimeInStatusBar.Caption = currentDate.ToLongTimeString() + "      " + currentDate.ToLongDateString();
             };
             timer.Start();
-        }
-
-        private void SplachScreen()
-        {
-            FluentSplashScreenOptions op = new FluentSplashScreenOptions();
-            op.Title = "When Only The Best Will Do";
-            op.Subtitle = "DevExpress WinForms Controls";
-            op.RightFooter = "Starting...";
-            op.LeftFooter = "Copyright © 2000 - 2020 Developer Express Inc." + Environment.NewLine + "All Rights reserved.";
-            op.LoadingIndicatorType = FluentLoadingIndicatorType.Dots;
-            op.OpacityColor = Color.Gray;
-            op.Opacity = 130;
-            //op.LogoImageOptions.SvgImage = Resources.Logo;
-
-            SplashScreenManager.ShowFluentSplashScreen(
-                op,
-                parentForm: this,
-                useFadeIn: true,
-                useFadeOut: true
-            );
         }
 
         private void BarItemNavigation_Click(object sender, ItemClickEventArgs e)

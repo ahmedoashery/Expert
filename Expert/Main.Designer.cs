@@ -128,7 +128,7 @@ namespace Expert
             this.MainRibbonControl.SearchItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.S));
             this.MainRibbonControl.ShowSearchItem = true;
-            this.MainRibbonControl.Size = new System.Drawing.Size(790, 143);
+            this.MainRibbonControl.Size = new System.Drawing.Size(907, 143);
             this.MainRibbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // MainMenu
@@ -310,7 +310,7 @@ namespace Expert
             // 
             this.OrdersListLink.Caption = "Sales Orders";
             this.OrdersListLink.Id = 87;
-            this.OrdersListLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("OrdersList.ImageOptions.SvgImage")));
+            this.OrdersListLink.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("OrdersListLink.ImageOptions.SvgImage")));
             this.OrdersListLink.Name = "OrdersListLink";
             this.OrdersListLink.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarItemNavigation_Click);
             // 
@@ -400,10 +400,10 @@ namespace Expert
             this.ribbonStatusBar.ItemLinks.Add(this.UsernameLabel);
             this.ribbonStatusBar.ItemLinks.Add(this.Username);
             this.ribbonStatusBar.ItemLinks.Add(this.CurrentDateTimeInStatusBar);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 676);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.MainRibbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(907, 31);
             // 
             // MainDockManager
             // 
@@ -458,7 +458,7 @@ namespace Expert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 599);
+            this.ClientSize = new System.Drawing.Size(907, 707);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.MainRibbonControl);
             this.IsMdiContainer = true;
